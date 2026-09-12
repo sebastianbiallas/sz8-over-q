@@ -1,6 +1,6 @@
 # Sz(8) over Q: paper and certificate
 
-This repository contains a paper realizing the Suzuki group Sz(8) regularly over Q, together with the exact data and the programs that certify it. The paper is `main.tex`; `main.pdf` is a compiled working draft. Author: Sebastian Biallas; the AI-assistance disclosure is the author footnote on the title page.
+This repository contains a paper realizing the Suzuki group Sz(8) regularly over Q, together with the exact data and the programs that certify it. The paper is `main.tex`; `main.pdf` is the compiled paper. Author: Sebastian Biallas; the AI-assistance disclosure is the author footnote on the title page.
 
 DOI: [10.5281/zenodo.22730384](https://doi.org/10.5281/zenodo.22730384)
 
