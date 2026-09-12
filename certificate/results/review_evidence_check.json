@@ -115,12 +115,12 @@
     64,
     63
   ],
-  "runtime_seconds": 0.75,
+  "runtime_seconds": 1.3,
   "input_sha256": {
     "data/f.json": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
     "data/F3_L3P0P4.json": "d0b6c1e645bb165caddf9df38d0488cf2d7fd96115fea58c8d49d40c303d7007",
     "data/P_s1_number_field.json": "e3e4f6e28f0dde12af62a469fa74b068a9bbfdbf8f927351fdba79c4c6d45dc6",
     "data/monodromy.json": "56334509e81f502d6b9b202febc434b21df8bf13981142f0dab6a322795c33d2",
-    "sections/09-polynomial.tex": "8426792e618d904fd4ef7cd18b6f5e1f7c2511bcf40777b12ff70ce576a6cf2a"
+    "sections/09-polynomial.tex": "4f68236ee6411fa754ed4254d33897f9d8aaca839241a8f6897e584e8901fdb4"
   }
 }

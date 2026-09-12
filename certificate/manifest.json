@@ -42,7 +42,7 @@
   },
   {
    "path": "certificate/results/nodes_modp_check.json",
-   "sha256": "6bcc1bf6e294932a4a8a3e5cc0e47af42647a3c257cc155e332f125010690c88"
+   "sha256": "608703aa0099f7e183f9072f1a256c19d874ad45b436bfa3205fff34dcffd277"
   },
   {
    "path": "certificate/results/primitive65.json",
@@ -54,7 +54,7 @@
   },
   {
    "path": "certificate/results/review_evidence_check.json",
-   "sha256": "5525eb80a5b3ca2eb34ab9653e3cbc689e7c5bd34dc7ac2b6b092000c39f2cf7"
+   "sha256": "c2afa16f3c74e5aea18a0000c87fc78ac41346dfb917384ccb798bbc013f85c0"
   },
   {
    "path": "certificate/results/specialisation.json",

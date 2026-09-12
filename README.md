@@ -2,6 +2,8 @@
 
 This repository contains a paper realizing the Suzuki group Sz(8) regularly over Q, together with the exact data and the programs that certify it. The paper is `main.tex`; `main.pdf` is a compiled working draft. Author: Sebastian Biallas; the AI-assistance disclosure is the author footnote on the title page.
 
+DOI: [10.5281/zenodo.22730384](https://doi.org/10.5281/zenodo.22730384)
+
 The main result is an explicit regular Sz(8) extension over Q(s), obtained from a degree-65 Sz(8):3 polynomial by a rational cubic base change. The specialization at s = 0, or t = -7/5, has group Sz(8) over Q.
 
 ## Build and read
