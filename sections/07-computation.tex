@@ -1,0 +1,120 @@
+\Needspace{8\baselineskip}
+\section{Reproducibility and the proof package}\label{sec:computation}
+
+The exact coefficients of $f$ are the starting input to the proof package.
+The programs verify the assertions listed below, including the changes of
+generator and both specializations. The canonical-model and modular
+reconstruction engines used in discovery are not included. In particular,
+the reconstruction controls in \cref{sec:construction} do not establish an
+exact characteristic-zero identification of the upstream numerical curve
+with the canonical discovery model; the polynomial certificate supplies
+the proof of the stated realizations independently of that identification.
+
+\begin{table}[ht]
+\centering\small
+\begin{tabular}{@{}lp{0.73\linewidth}@{}}
+\toprule
+Polynomial&Role\\
+\midrule
+$f(X,t)$, $g(X,s)$&The certified auxiliary equation and its cleared pullback along $t=T(s)$\\
+$F_3(Y,U)$, $G_3(Y,s)$&The smaller equation, with $U=3(t+1)$, and its cleared pullback\\
+$h(X)$, $P(X)$&The fiber $f(X,-7/5)$ at $s=0$ and a reduced integral equation for the same field\\
+$P_1(X)$&The printed integral defining polynomial for the fiber $F_3(Y,4)$ at $s=1$\\
+\bottomrule
+\end{tabular}
+\caption{Polynomial notation and roles in the proof package.}
+\label{tab:presentations}
+\end{table}
+
+\subsection{Verification stages and software}
+
+\begin{center}
+\begin{tabular}{@{}p{0.31\linewidth}p{0.60\linewidth}@{}}
+\toprule
+Stage&Mathematical assertion\\
+\midrule
+Exact algebra&Discriminant identity, squarefreeness, branch-fiber multiplicities\\
+Exact modular node check&Degree-one gcds at every root of $S$; the local lemma gives unramified normalization\\
+Certified continuation&Two explicit permutations generate the geometric group\\
+Finite groups&Group identification, self-normalizer, inertia normalizers\\
+Cubic arithmetic&Identification of the rational quotient and the base change\\
+Specialization&Full $\Sz(8)$ group at $t=-7/5$ and $t=1/3$\\
+Changes of generator&Exact resultant bridge and printed number-field polynomial\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+Exact arithmetic uses FLINT through python-flint~\cite{FLINT,PythonFlint}
+and PARI/GP~\cite{PARI}; finite-group computations use GAP~\cite{GAP};
+ball computations use Arb~\cite{Arb2017} through python-flint;
+permutation-group computations also use SymPy~\cite{SymPy2017}.
+For the recorded run, the discriminant and parameter-root stage took
+about $488$ seconds, the node stage about $7$ seconds, and the two
+monodromy loops together about $1518$ seconds on the source machine.
+These timings describe the original interval-based run. The modular node
+check took about $44$ seconds on a different machine, including discriminant
+interpolation modulo $1000003$. The full-run driver uses the interval proof;
+the modular check is a separate exact alternative, conditional on the
+characteristic-zero discriminant identity \eqref{eq:discriminant}.
+
+The accompanying README gives separate commands for a short exact-data
+check and a full certificate run. The short check verifies file digests,
+the cubic pullback, specialization factorizations, and the group generated
+by the stored permutations; establishing those permutations as monodromy
+requires the certified continuation. SHA-256 hashes tie reports to their
+exact inputs.
+
+\subsection{Path and enclosure parameters}\label{sec:implementation}
+
+For the node test, parameter centers are exact decimal rationals and radii
+are integer powers of $10$. The consumer re-certifies each parameter
+rectangle at its own working precision before evaluating $f$ on it.
+All complex rectangles are enclosed by Euclidean discs using their
+half-diagonals.
+
+Each meridian uses a $24$-sided polygon inscribed in a circle of radius
+$\varepsilon\simeq0.00151183882584$. The reported minimum distance of the
+radial segments from node centers is about $0.00453551647752$.
+These decimals describe the path geometry; the continuation tests apply
+to the actual segments between the stored-precision waypoints.
+
+For each root enclosure with center $c_i$ and radius $r_i$, the program
+tries $R_i=\alpha d_i$, where $d_i=\min_{\ell\ne i}|c_i-c_\ell|$ and
+$\alpha\in\{0.1,0.03,0.01,0.003,0.001\}$. It retains only radii greater
+than $4r_i$ and chooses the one allowing the largest certified step under
+the Rouch\'e bounds in \cref{sec:certificate}. If derivative-root isolation
+fails, the fallback bounds the derivative term by term in $t$, using
+precomputed factorizations of the coefficient polynomials in $X$.
+Both meridians were run at $1200$ bits and required $1564$ accepted
+steps each.
+
+\Needspace{14\baselineskip}
+\subsection{Data formats and exact inputs}\label{app:data}
+
+The file \texttt{data/f.json} specifies the $472$ nonzero terms of $f$
+exactly. An entry with key
+\texttt{"i,j"} and rational value \texttt{"a/b"} denotes the term
+$(a/b)X^i t^j$; omitted terms are zero. In particular, the coefficient
+of $X^{65}$ is $1$, and that of $X^{64}$ is $0$.
+
+Its SHA-256 digest is
+{\small\texttt{4f88390af6e2119988e252d5ea62629e25c8a8bbe79bb63e56adddf18e0f319e}}.
+
+The file \texttt{data/g.json} gives the cleared-denominator polynomial
+\eqref{eq:g}, of primitive integer height $256$ digits. A coefficient list
+for key \texttt{"i"} gives the coefficient of $X^i$ in ascending powers
+of $s$. The file
+\texttt{data/monodromy.json} records $\sigma_1$ and $\sigma_2$ as zero-based
+image lists: entry $i$ is the image of letter $i$. Their product means
+apply $\sigma_1$ first, then $\sigma_2$.
+
+The directory \texttt{certificate/} contains verification programs,
+recorded reports, a finite-group script, and a losslessly compressed exact
+discriminant artifact. The latter also contains parameter-root enclosures
+and can be regenerated from $f$. A manifest records the digests of all
+certificate files.
+
+These files mark the reproducible boundary of the argument. The proof of
+the realizations uses the exact polynomial data, the algebraic checks, and
+the certified continuation described here. The discovery model explains
+how those inputs were found, but is not a trusted input to the proof.

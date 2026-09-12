@@ -1,0 +1,399 @@
+{
+ "gap_script": "gap/primitive65.g",
+ "primitive_groups_degree_65": [
+  {
+   "i": 1,
+   "name": "PSL(2, 5^2)",
+   "order": 7800,
+   "derived_order": 7800,
+   "simple": true
+  },
+  {
+   "i": 2,
+   "name": "PSigmaL(2, 5^2)",
+   "order": 15600,
+   "derived_order": 7800,
+   "simple": false
+  },
+  {
+   "i": 3,
+   "name": "PSU(3, 4)",
+   "order": 62400,
+   "derived_order": 62400,
+   "simple": true
+  },
+  {
+   "i": 4,
+   "name": "PSU(3, 4).2",
+   "order": 124800,
+   "derived_order": 62400,
+   "simple": false
+  },
+  {
+   "i": 5,
+   "name": "PGammaU(3, 4)",
+   "order": 249600,
+   "derived_order": 62400,
+   "simple": false
+  },
+  {
+   "i": 6,
+   "name": "PSz(8)",
+   "order": 29120,
+   "derived_order": 29120,
+   "simple": true
+  },
+  {
+   "i": 7,
+   "name": "PSz(8).3",
+   "order": 87360,
+   "derived_order": 29120,
+   "simple": false
+  },
+  {
+   "i": 8,
+   "name": "PSL(2, 2^6)",
+   "order": 262080,
+   "derived_order": 262080,
+   "simple": true
+  },
+  {
+   "i": 9,
+   "name": "PSL(2, 2^6).2",
+   "order": 524160,
+   "derived_order": 262080,
+   "simple": false
+  },
+  {
+   "i": 10,
+   "name": "PSL(2, 2^6).3",
+   "order": 786240,
+   "derived_order": 262080,
+   "simple": false
+  },
+  {
+   "i": 11,
+   "name": "PGammaL(2, 2^6)",
+   "order": 1572480,
+   "derived_order": 262080,
+   "simple": false
+  },
+  {
+   "i": 12,
+   "name": "A(65)",
+   "order": 4123825296041235333361585153392748126093129275672718746461061567194477887488000000000000000,
+   "derived_order": 4123825296041235333361585153392748126093129275672718746461061567194477887488000000000000000,
+   "simple": true
+  },
+  {
+   "i": 13,
+   "name": "S(65)",
+   "order": 8247650592082470666723170306785496252186258551345437492922123134388955774976000000000000000,
+   "derived_order": 4123825296041235333361585153392748126093129275672718746461061567194477887488000000000000000,
+   "simple": false
+  }
+ ],
+ "facts": {
+  "n_primitive_groups": 13,
+  "normaliser_in_S65_order": 87360,
+  "Sz8_order": 29120,
+  "Sz8_simple": true,
+  "Sz8_maximal_subgroup_orders": [
+   448,
+   52,
+   20,
+   14
+  ],
+  "Sz8_element_orders": [
+   1,
+   2,
+   4,
+   5,
+   7,
+   13
+  ],
+  "Sz8_3_element_orders": [
+   1,
+   2,
+   3,
+   4,
+   5,
+   6,
+   7,
+   12,
+   13,
+   15
+  ],
+  "N_G_C13_order": 156,
+  "N_G_C13_orbit_lengths": [
+   52,
+   13
+  ],
+  "N_Sz8_C13_order": 52
+ },
+ "classes_of_Sz8_3_on_65_points": [
+  {
+   "element_order": 1,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     65
+    ]
+   ],
+   "in_Sz8": true
+  },
+  {
+   "element_order": 5,
+   "cycle_lengths_with_multiplicity": [
+    [
+     5,
+     13
+    ]
+   ],
+   "in_Sz8": true
+  },
+  {
+   "element_order": 3,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     20
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 3,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     5
+    ],
+    [
+     3,
+     20
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 2,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     32
+    ]
+   ],
+   "in_Sz8": true
+  },
+  {
+   "element_order": 4,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     16
+    ]
+   ],
+   "in_Sz8": true
+  },
+  {
+   "element_order": 4,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     16
+    ]
+   ],
+   "in_Sz8": true
+  },
+  {
+   "element_order": 6,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     6,
+     10
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 6,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     2,
+     2
+    ],
+    [
+     6,
+     10
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 12,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 12,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 12,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 12,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     1
+    ],
+    [
+     4,
+     1
+    ],
+    [
+     12,
+     5
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 15,
+   "cycle_lengths_with_multiplicity": [
+    [
+     5,
+     1
+    ],
+    [
+     15,
+     4
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 15,
+   "cycle_lengths_with_multiplicity": [
+    [
+     5,
+     1
+    ],
+    [
+     15,
+     4
+    ]
+   ],
+   "in_Sz8": false
+  },
+  {
+   "element_order": 7,
+   "cycle_lengths_with_multiplicity": [
+    [
+     1,
+     2
+    ],
+    [
+     7,
+     9
+    ]
+   ],
+   "in_Sz8": true
+  },
+  {
+   "element_order": 13,
+   "cycle_lengths_with_multiplicity": [
+    [
+     13,
+     5
+    ]
+   ],
+   "in_Sz8": true
+  }
+ ],
+ "gates": {
+  "thirteen_primitive_groups": true,
+  "unique_group_of_order_87360": true,
+  "derived_subgroup_is_simple_of_order_29120": true,
+  "normaliser_in_S65_is_itself": true,
+  "N_G_C13_is_13_12_with_orbits_52_13": true,
+  "N_Sz8_C13_is_13_4": true,
+  "no_maximal_subgroup_order_divisible_by_91": true,
+  "Sz8_has_no_element_of_order_3": true,
+  "elements_outside_Sz8_have_order_divisible_by_3": true
+ },
+ "all_gates_pass": true,
+ "runtime_seconds": 1.9
+}

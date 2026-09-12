@@ -1,0 +1,76 @@
+\documentclass[11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[margin=1.05in]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage{microtype,booktabs,array,enumitem}
+\usepackage{tikz-cd,needspace}
+\usepackage[dvipsnames]{xcolor}
+\usepackage[colorlinks=true,linkcolor=MidnightBlue,citecolor=MidnightBlue,urlcolor=MidnightBlue]{hyperref}
+\usepackage[capitalise,nameinlink,noabbrev]{cleveref}
+\setlength{\emergencystretch}{2em}
+\setcounter{tocdepth}{1}
+\hypersetup{pdftitle={A regular realization of the Suzuki group Sz(8) over Q},pdfauthor={Sebastian Biallas}}
+\newcommand{\Q}{\mathbb{Q}}
+\newcommand{\C}{\mathbb{C}}
+\newcommand{\Z}{\mathbb{Z}}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\Sz}{\operatorname{Sz}}
+\newcommand{\Gal}{\operatorname{Gal}}
+\newcommand{\Aut}{\operatorname{Aut}}
+\newcommand{\disc}{\operatorname{disc}}
+\newcommand{\Res}{\operatorname{Res}}
+\newcommand{\ord}{\operatorname{ord}}
+\newcommand{\OO}{\mathcal{O}}
+\newcommand{\zetaT}{\zeta_3}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\title{A regular realization of the Suzuki group\texorpdfstring{\\$\Sz(8)$ over $\Q$}{ Sz(8) over Q}}
+\author{Sebastian Biallas\thanks{The computations, verification programs,
+and text of this paper were produced with extensive use of large language
+models under the author's direction; the author takes full responsibility
+for the contents.}\\
+\normalsize\href{mailto:sb@biallas.net}{\texttt{sb@biallas.net}}}
+\date{}
+\begin{document}
+\maketitle
+\begin{abstract}
+We realize the Suzuki group $\Sz(8)$ regularly over $\Q$ by an explicit
+degree-$65$ family over $\Q(s)$, and give a monic integral degree-$65$
+polynomial over $\Q$ with this Galois group and $43$-digit coefficients.
+Every three-point regular realization
+of $\Aut(\Sz(8))=\Sz(8)\rtimes C_3$ over $\Q(t)$ has a rational cyclic
+cubic quotient: it is ramified at exactly two geometric points, and its
+odd degree makes its genus-zero curve rational over $\Q$.
+We construct such a realization as a genus-six cover of degree $65$
+branched at $\zeta_3,\zeta_3^2,\infty$, and pull back along an explicit
+cubic map $t=T(s)$. A monic polynomial $f(X,t)$ of bidegree $(65,7)$
+is certified directly from its coefficients by an exact discriminant
+computation, a local argument removing $342$ apparent branch points,
+and certified continuation.
+\end{abstract}
+\begingroup\small
+\tableofcontents
+\endgroup
+\clearpage
+% Keep source filenames stable; the reading order is proof, discovery, package.
+\input{sections/01-introduction}
+\input{sections/02-strategy}
+\input{sections/04-certificate}
+\input{sections/05-cubic-quotient}
+\input{sections/06-specialization}
+\input{sections/08-data}
+\input{sections/03-construction}
+\input{sections/07-computation}
+\appendix
+\input{sections/09-polynomial}
+\clearpage
+\begingroup\small
+\bibliographystyle{alpha}
+\bibliography{references}
+\endgroup
+\end{document}

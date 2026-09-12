@@ -1,0 +1,101 @@
+\section{Rational cyclic cubic quotients}\label{sec:strategy}
+
+The degree-$65$ permutation representation of $N=\Sz(8)$ extends to
+$G=N\rtimes C_3$. The element orders in $N$ are $1,2,4,5,7,13$.
+Thus order-$3$ inertia maps nontrivially to $G/N$, whereas order-$13$
+inertia maps trivially. The passport \eqref{eq:passport} therefore gives
+a cyclic cubic quotient ramified at exactly two geometric points.
+
+\begin{lemma}\label{lem:rationalquotient}
+Let $L/\Q(t)$ be a regular Galois extension with group $G$, and let
+$N\triangleleft G$ with $G/N\simeq C_3$. If $M=L^N$ is ramified over exactly
+two points of $\PP^1(\overline{\Q})$, then $M\simeq\Q(s)$. In particular,
+$L/\Q(s)$ is a regular Galois extension with group $N$.
+\end{lemma}
+\begin{proof}
+Let $C$ be the smooth projective curve with function field $M$. Its
+degree-three map to $\PP^1$ is totally ramified at each branch point,
+since a nontrivial inertia subgroup of a cyclic group of prime order is
+the whole group. Riemann--Hurwitz gives
+\[
+2g(C)-2=3(-2)+2(3-1)=-2.
+\]
+The pullback of any rational point of $\PP^1$ is a rational divisor of
+degree $3$ on $C$. Adding a canonical divisor gives a rational divisor
+of degree $1$, which is linearly equivalent to an effective divisor by
+Riemann--Roch. Thus $C$ has a rational point and $C\simeq\PP^1_\Q$.
+Regularity is inherited from $L$.
+\end{proof}
+
+The branch cycle lemma relates the Galois action on branch points to
+cyclotomic powers of inertia generators~\cite{Fried1977}; see also
+\cite[p.~34]{Volklein1996}. For a constant cyclic group, conjugacy classes
+are singletons. This gives a useful restriction on the quotient geometry.
+
+\begin{proposition}\label{prop:cyclic-prime}
+Let $M/\Q(t)$ be a regular Galois extension with constant group $C_\ell$,
+where $\ell$ is an odd prime, and let $r$ be its number of geometric branch
+points. Every Galois orbit of branch points has size divisible by
+$\ell-1$, and
+\[
+ g(M)=\frac{(\ell-1)(r-2)}{2}
+ \geq\frac{(\ell-1)(\ell-3)}{2}.
+\]
+In particular, for $\ell=3$ one has $r=2k$ and $g(M)=2k-2$, with $k\geq1$.
+\end{proposition}
+\begin{proof}
+Fix a branch point $a$ and its nonidentity inertia generator $g_a$.
+If $\tau\in\Gal(\overline{\Q}/\Q)$ fixes $a$, the branch cycle lemma gives
+$g_a^{\chi_\ell(\tau)}=g_a$; with the inverse branch-cycle convention the
+exponent is $\chi_\ell(\tau)^{-1}$ instead.  Here $\chi_\ell$ is the
+cyclotomic character modulo $\ell$.  Since $g_a$ has order $\ell$, either
+equality forces $\chi_\ell(\tau)=1$, and hence
+$\Q(\zeta_\ell)\subseteq\Q(a)$.
+Thus $\ell-1$ divides the size of each branch-point orbit. The extension
+cannot be geometrically unramified, since $\PP^1_{\C}$ has no connected
+nontrivial unramified cover. Hence $r\geq\ell-1$. Every branch point is
+totally ramified, so Riemann--Hurwitz gives
+$2g(M)-2=-2\ell+r(\ell-1)$, as asserted.
+\end{proof}
+
+\begin{corollary}\label{cor:threepoint}
+For a regular $G$-extension $L/\Q(t)$ with $G/N\simeq C_3$, the fixed
+field $L^N$ is rational over $\Q$ if and only if exactly two branch cycles
+lie outside $N$. In particular, every three-point regular realization
+of $\Aut(\Sz(8))$ over $\Q(t)$ yields a regular realization of $\Sz(8)$
+over $\Q(s)$ by a cyclic cubic base change.
+\end{corollary}
+\begin{proof}
+A branch point survives in $L^N$ precisely when its inertia generator
+lies outside $N$. The proposition shows that the quotient has genus zero
+exactly when two branch points survive, and \cref{lem:rationalquotient}
+then gives rationality. For a three-point cover, the number surviving is
+positive, even, and at most three, hence two.
+\end{proof}
+
+The next cyclic cubic possibility has genus $2$. For $\ell=5$ the lower
+bound is already $4$; in particular, the quotient by $\Sz(32)$ in a
+regular realization of $\Aut(\Sz(32))=\Sz(32)\rtimes C_5$ cannot be rational.
+For index $2$, genus zero alone need not imply rationality: a rational
+point on the quotient conic is additional input. Serre's double group
+trick supplies such a point when the branch points are rational
+\cite[Lemma~4.5.1]{Serre2008}. Malle's rational translates
+\cite{Malle1991} and K\"onig's index-two descent
+\cite[Proposition~3]{Konig2017} are related precedents; outer automorphisms
+also appear in \cite{Malle1992}. In contrast, Zywina's realization of
+$\operatorname{PSL}_3(\mathbb F_4)$ uses rational points on a genus-three
+quotient~\cite[\S1]{Zywina2025}.
+
+\begin{remark}
+The rational curve in \cref{lem:rationalquotient} is a quotient of the
+Galois closure. The degree-$65$ source curve has genus $6$ before base
+change and genus $26$ afterwards. The quotient criterion therefore remains
+useful even when the degree-$65$ source has positive genus.
+\end{remark}
+
+For the construction we restrict the two outer inertia orders to $3$.
+The remaining inertia order is then $5$, $7$, or $13$, giving source
+genera $2$, $3$, and $6$, respectively (\cref{sec:passports}). The genus-two
+construction produced a cover over a cubic number field; the genus-six
+construction produced the cover over $\Q$ used here. We now certify its
+polynomial, then identify the arithmetic form of the cubic quotient.

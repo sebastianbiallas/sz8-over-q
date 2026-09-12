@@ -1,0 +1,1369 @@
+{
+ "f_poly_sha256": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
+ "g_poly_sha256": "bf1d591da900bf19e801d32677aa765ec3de6bc5b262753063082a52c60d5fb6",
+ "specialisation": {
+  "s": 0,
+  "t": "-7/5"
+ },
+ "first_separable_prime": 11,
+ "order_7_witness_prime": 11,
+ "order_13_witness_prime": 31,
+ "Sz8_maximal_subgroup_orders": [
+  448,
+  52,
+  20,
+  14
+ ],
+ "gates": {
+  "g_at_s0_equals_den0_7_times_f_at_t0": true,
+  "f_spec_denominators_only_5_13": true,
+  "f_spec_separable_over_Q": true,
+  "order_7_frobenius_witness": true,
+  "order_13_frobenius_witness": true,
+  "no_maximal_subgroup_of_Sz8_has_order_divisible_by_91": true,
+  "all_frobenius_cycle_types_are_Sz8_types": true
+ },
+ "all_gates_pass": true,
+ "conclusion": "Gal(f(X, -7/5) / Q) = Gal(g(X, 0) / Q) = Sz(8), given Gal(g / Q(s)) = Sz(8) (KB C44): the decomposition group at s = 0 contains elements of orders 7 and 13, and no proper subgroup of Sz(8) does.",
+ "rows": [
+  {
+   "p": 11,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 17,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 19,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 23,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 29,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 31,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 37,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 41,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 43,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 47,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 53,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 59,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 61,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 67,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 71,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 73,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 79,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 83,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 89,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 97,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 101,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 103,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 107,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 109,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 113,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 127,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 131,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 137,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 139,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 149,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 151,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 157,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 163,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 167,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 173,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 179,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 181,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 191,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 193,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 197,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 199,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 211,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 223,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 227,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 229,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 233,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 239,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 241,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 251,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 257,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 263,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 269,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 271,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 277,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 281,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 283,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 293,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 307,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 311,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 313,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 317,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 331,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 337,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 347,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 349,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 353,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 359,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 367,
+   "cycle_type": [
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5,
+    5
+   ],
+   "frobenius_order": 5,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 373,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 379,
+   "cycle_type": [
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    7,
+    1,
+    1
+   ],
+   "frobenius_order": 7,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 383,
+   "cycle_type": [
+    13,
+    13,
+    13,
+    13,
+    13
+   ],
+   "frobenius_order": 13,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 389,
+   "cycle_type": [
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    4,
+    1
+   ],
+   "frobenius_order": 4,
+   "is_Sz8_cycle_type": true
+  },
+  {
+   "p": 397,
+   "cycle_type": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    2,
+    1
+   ],
+   "frobenius_order": 2,
+   "is_Sz8_cycle_type": true
+  }
+ ],
+ "runtime_seconds": 0.1
+}

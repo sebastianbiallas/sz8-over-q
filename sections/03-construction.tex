@@ -1,0 +1,146 @@
+\section{Discovery}\label{sec:construction}
+
+Chen's interpretation of noncongruence modular curves as Hurwitz spaces
+was the starting point~\cite[\S5.4]{Chen2025}. On his distinguished
+component, one positive-rank rational fiber would suffice
+\cite[Proposition~5.6 and the following remark]{Chen2025}, but our
+computation found none. We instead searched for three-point
+$\Aut(\Sz(8))$-covers whose cyclic cubic quotient could yield $\Sz(8)$
+after base change; an order-three symmetry of a $(5,5,5)$ cover suggested
+this route.
+
+\subsection{The three passports with outer inertia of order three}\label{sec:passports}
+
+For a three-point regular $G$-cover, the two outer branch points form one
+Galois orbit. The proof of \cref{prop:cyclic-prime} shows that their common
+residue field is exactly $\Q(\zeta_3)$. The third branch point is rational.
+A fractional linear transformation over $\Q$ places the third point at
+$\infty$ and the conjugate pair at $\zeta_3,\zeta_3^2$.
+
+We restrict the two outer inertia orders to $3$. There is one order-$3$
+class $D$ in each outer coset, and the two classes are inverses. The class
+in the rational branch slot must be rational in $G$. The order-$7$
+classes of $N$ fuse in $G$, as do the order-$13$ classes; together with the
+order-$5$ class they give the following possibilities. The two order-$4$
+classes are inverse and remain distinct, so neither is rational. The
+involution class, of type $1\,2^{32}$, would give the impossible genus
+$1-65+(32+40+40)/2=-8$. These observations make the table exhaustive
+under the stated order-$3$ restriction.
+
+\begin{center}
+\begin{tabular}{@{}cccc@{}}
+\toprule
+Order in the rational slot&Cycle type&Source genus&Nielsen classes\\
+\midrule
+$5$&$5^{13}$&$2$&$3$\\
+$7$&$1^2 7^9$&$3$&$6$\\
+$13$&$13^5$&$6$&$4$\\
+\bottomrule
+\end{tabular}
+\end{center}
+The other two cycles have type $1^5 3^{20}$. For example, the last row has
+genus $1-65+(60+40+40)/2=6$.
+
+The counts are for generating product-one triples in $(C,D,D^{-1})$
+with ordered branch slots, modulo simultaneous conjugation by $G$.
+Fixing the first entry $c\in C$ leaves respectively $45$, $42$, and $52$
+choices of the second entry that generate $G$ and give the required third
+entry. The centralizers of $c$ have orders $15$, $7$, and $13$.
+Their action is free because a generating triple has centralizer $Z(G)=1$;
+division gives $3$, $6$, and $4$. Thus the $(13,3,3)$ passport is not rigid.
+Complex conjugation fixes two of its four classes and interchanges the
+other two. Reality alone does not determine which classes descend to $\Q$;
+the polynomial certificate proves descent for the class used here.
+
+The order-$5$ construction supplied a genus-two cover over
+$\Q(\theta)$ with $\theta^3-\theta^2+2\theta+2=0$. The order-$13$ row
+supplied the rational cover.
+
+\subsection{Numerical construction and arithmetic coordinates}
+
+The triangle-group method associates a finite-index subgroup of the
+triangle group of signature $(13,3,3)$ to a permutation triple. Expansions
+of holomorphic differentials give a canonical model of the source curve.
+For the chosen cover the canonical model is a genus-six curve in $\PP^5$,
+realized as a quadric section of a smooth del Pezzo surface of degree $5$.
+In particular, it is neither hyperelliptic, trigonal, nor a plane quintic.
+The canonical hyperplane divisor $H$ has degree $10$.
+
+A marking of the del Pezzo surface is additional arithmetic data.  The
+descent computation identified the Galois action on its five degree-four
+pencils with the full group $S_5$.  Coordinates adapted to an ordered
+marking therefore need not be rational even when the curve and covering
+map descend to $\Q$.  Invariant data and the branch fibers produced an
+exact rational model, after which the map was represented by a ratio of
+sections of $\OO_Z(8H)$.  Some entries of the exact kernel vectors defining
+those sections have $480038$ decimal digits.  This size motivated a
+different generator of the function field rather than further manipulation
+of the same coordinates.
+
+\subsection{Generators with poles over infinity}
+
+The pole fiber is $13(P_0+P_4)$, with the rational point $P_0$ and
+degree-four point $P_4$ identified in \cref{sec:infinity}.
+In the discovery model the first non-gap at $P_0$
+is $7$, so $P_0$ is not a Weierstrass point. Choose a nonconstant function
+$x\in L(7P_0)$. The coefficient bound is \cref{lem:polebound}.
+
+For $x\in L(7P_0)$ the list consists of thirteen entries $7/13$ and
+fifty-two zeros, recovering
+$\deg_t c_i\leq\lfloor7\min(i,13)/13\rfloor\leq7$.
+The function $x$ generates $\Q(Z)/\Q(t)$ because the permutation action
+is primitive: a proper intermediate field would give a block system,
+while a function with only the pole $P_0$ cannot belong to $\Q(t)$.
+Trace-centering kills the coefficient of $X^{64}$.
+The resulting $f$ has primitive integer height $249$ digits. Its rational
+coefficients have numerators of at most $244$ digits and common denominator
+$13^{182}$; these are separate coefficient statistics.
+
+The same search in $L(3P_0+P_4)$ produced $F_3$. The pole bound and
+exact bridge are given in \cref{sec:smaller}.
+
+\subsection{Recovering the linear series without eliminating the base locus}
+
+Write $t=N/D$ with $N,D\in V=H^0(Z,\OO_Z(8H))$, so $\dim V=75$.
+Their common base divisor $R$ has degree $15$, and
+$\operatorname{div}(D)=13(P_0+P_4)+R$. The condition that $A/D$ belong to
+$L(7P_0)$ consists of vanishing of $A$ along $R$, to order $13$ along
+$P_4$, and to order $6$ at $P_0$.
+
+The base-divisor condition can be imposed by multiplication of sections.
+Indeed,
+\begin{equation}\label{eq:base-locus-linear}
+ NV+DV=H^0(Z,\OO_Z(16H)(-R)).
+\end{equation}
+The right-hand side has dimension $145+1-6=140$. To compute the dimension
+on the left, remove the common divisor from $N$ and $D$. The resulting
+pencil is base-point free. Its relations identify $NV\cap DV$ with
+$H^0(Z,\OO_Z(R))$, which has dimension $15+1-6=10$. Hence the left-hand
+side also has dimension $150-10=140$, proving \eqref{eq:base-locus-linear}.
+Since $V$ is globally generated,
+\begin{equation}\label{eq:membership}
+ A\text{ vanishes along }R\quad\Longleftrightarrow\quad AV\subseteq NV+DV.
+\end{equation}
+For the reverse implication, choose locally a section in $V$ that is a
+unit along each point of $R$ and apply \eqref{eq:base-locus-linear}.
+
+This replaces explicit equations for the base locus by a linear-algebra
+test. Sections of $\OO_Z(16H)$ are determined by jets of length $34$ at
+the five geometric pole points: a section vanishing on all those jets
+would have at least $170$ zeros, exceeding its degree $160$.
+The same jets therefore suffice to implement \eqref{eq:membership}.
+
+The Riemann--Roch calculation was performed at $92$ primes used for Chinese
+remaindering and at eight held-out primes.  At every prime the computed
+space $L(7P_0)$ had dimension two and pole-order flag $(7,0)$; all $473$
+coefficient slots were reconstructed, and an exact rational control
+identified the result with an affine change of $f$.  Thus the calculation
+also supplies the stated first non-gap.  The same run for
+$L(3P_0+P_4)$ gave dimension two, pole-order flag $(3,0)$, and all $319$
+slots reconstructed with the same held-out checks.  The resultant
+calculation in \cref{app:smaller} then proves over $\Q(t)$ that its reduced
+polynomial has the same function field as $f$.
+
+Choosing these generators turns the large section representation into a
+compact plane equation. The resulting singularities account for the
+apparent branch points treated in \cref{sec:certificate}.

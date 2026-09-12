@@ -1,0 +1,48 @@
+{
+  "prime": 1000003,
+  "f_sha256": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
+  "gates": {
+    "degree_764": true,
+    "q_order_40": true,
+    "S_degree_342": true,
+    "discriminant_shape": true,
+    "S_squarefree": true,
+    "S_coprime_q": true,
+    "all_gcd_degrees_one": true,
+    "complete_output": true,
+    "factor_degrees": true,
+    "process_success": true
+  },
+  "factors": [
+    {
+      "factor_degree": 1,
+      "gcd_degree": 1
+    },
+    {
+      "factor_degree": 3,
+      "gcd_degree": 1
+    },
+    {
+      "factor_degree": 5,
+      "gcd_degree": 1
+    },
+    {
+      "factor_degree": 14,
+      "gcd_degree": 1
+    },
+    {
+      "factor_degree": 78,
+      "gcd_degree": 1
+    },
+    {
+      "factor_degree": 84,
+      "gcd_degree": 1
+    },
+    {
+      "factor_degree": 157,
+      "gcd_degree": 1
+    }
+  ],
+  "all_gates_pass": true,
+  "runtime_seconds": 44.54
+}

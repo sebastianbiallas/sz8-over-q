@@ -1,0 +1,130 @@
+\section{Smaller presentations and a printed specialization}\label{sec:smaller}
+
+A generator with poles distributed over the fiber at infinity gives a
+much smaller coefficient height for an equation of the same bidegree.
+We first explain the degree bound, then prove the change of generator by
+exact resultant identities and give a compact integral specialization.
+For a nonzero rational polynomial, its \emph{primitive integer height}
+is the maximum number of decimal digits of the absolute values of its
+coefficients after clearing denominators and dividing out their common
+integer factor. All heights below use this convention.
+
+\Needspace{15\baselineskip}
+\subsection{Coefficient degrees from pole orders}
+\begin{lemma}\label{lem:polebound}
+Suppose $t:Z\to\PP^1$ has degree $n$, and $x$ generates $\Q(Z)/\Q(t)$
+with all its poles above $\infty$. At each geometric point $P$ above
+$\infty$, let $e_P$ be the ramification index and let $k_P$ be the pole
+order of $x$, or $0$ if $x$ is regular there. Form a list
+$\lambda_1\geq\cdots\geq\lambda_n$ by repeating $k_P/e_P$ exactly $e_P$
+times for each $P$. Then the minimal polynomial
+\[
+ F(X,t)=X^n+\sum_{i=1}^{n}c_i(t)X^{n-i}
+\]
+has $c_i(t)\in\Q[t]$ and
+\[
+ \deg_t c_i\leq\left\lfloor\lambda_1+\cdots+\lambda_i\right\rfloor.
+\]
+\end{lemma}
+\begin{proof}
+The function $x$ is regular above the affine $t$-line, so is integral over
+$\Q[t]$. Its minimal polynomial therefore has coefficients in $\Q[t]$.
+At infinity, each of the $e_P$ local sheets associated with $P$ grows at most like
+$t^{k_P/e_P}$. Every term in the $i$th elementary symmetric function is
+therefore bounded by a constant times $|t|^{\lambda_1+\cdots+\lambda_i}$.
+Since $c_i$ is a polynomial, its degree satisfies the asserted bound.
+\end{proof}
+
+For a generator with pole divisor $3P_0+P_4$ as in
+\eqref{eq:polefiber}, the list has thirteen entries $3/13$ and fifty-two entries
+$1/13$, so
+\[
+ \deg_t c_i\leq
+ \left\lfloor\frac{3\min(i,13)+\max(i-13,0)}{13}\right\rfloor\leq7.
+\]
+Thus such a generator gives an equation of $t$-degree at most $7$.
+The exact coefficients of $F_3$ attain this bound. The affine substitution
+$U=3(t+1)$ preserves the degree.
+
+\subsection{The smaller family and its exact bridge}\label{app:smaller}
+
+The polynomial $F_3(Y,U)$ has $318$ nonzero terms and primitive integer
+height $47$ digits, compared with $249$ digits for $f$, although $F_3$ is
+the denser polynomial. In the coordinate
+$U=3(t+1)$ its leading terms are
+\begin{equation}\label{eq:F3-leading}
+\begin{split}
+F_3(Y,U)={}&Y^{65}+78Y^{64}+2652Y^{63}+48880Y^{62}+457290Y^{61}\\
+ &+(296636-13312U)Y^{60}+\cdots.
+\end{split}
+\end{equation}
+The full file \texttt{data/F3\_L3P0P4.json} uses the exponent-pair encoding
+in \cref{app:data}. Its generator comes from the two-dimensional space
+$L(3P_0+P_4)$ in the discovery model. The following criterion proves its
+relation to $f$.
+
+\Needspace{11\baselineskip}
+\begin{lemma}[Exact change of generator]\label{lem:bridge}
+Let $K$ be a field of characteristic zero, and let $F(X),P(Y)$ be monic
+irreducible polynomials of the same degree in $K[X]$ and $K[Y]$.
+For $\Psi\in K[X,Y]$, put
+\[
+ A(X)=\Res_Y(P(Y),\Psi(X,Y)),\qquad
+ B(Y)=\Res_X(F(X),\Psi(X,Y)).
+\]
+If $F\mid A$, $F^2\nmid A$, $P\mid B$, and $P^2\nmid B$, then
+$\Psi(\alpha,\beta)=0$ gives a Galois-equivariant bijection between the
+roots of $F$ and $P$. Corresponding roots generate the same extension of
+$K$, and the two splitting fields coincide.
+\end{lemma}
+\begin{proof}
+Since $P$ is monic, $A(X)=\prod_{P(\beta)=0}\Psi(X,\beta)$.
+Irreducibility and separability of $F$, together with its multiplicity one
+in $A$, show that each root $\alpha$ is a simple root of $A$. Exactly one
+factor of the product therefore vanishes at $\alpha$. The same argument
+with $B$ gives uniqueness in the reverse direction. The relation is
+ defined over $K$, so the bijection commutes with every automorphism of an
+algebraic closure of $K$. Corresponding roots have equal stabilizers,
+proving the field assertions.
+\end{proof}
+
+Apply the lemma over $K=\Q(t)$ with $F=f(X,t)$ and
+$P=F_3(Y,3(t+1))$. The supplied bridge file records a relation $\Psi$ of
+bidegree $(7,7)$ and the affine change of generator used to express it.
+The verifier checks the relation with that change applied; the public
+$F_3$ agrees after the parameter substitution $U=3(t+1)$.
+Irreducibility of $P$ is checked at $t=0$. The two resultant remainders
+have $t$-degree at most $294$ and $154$: division by a monic polynomial
+preserves the weights supplied by the pole bounds. Their exact vanishing
+at $295$ and $155$ rational values, respectively, proves the two
+divisibilities. Coprimality of each quotient with its divisor at $t=0$
+proves multiplicity one.
+
+It follows that $F_3$ has the same splitting field as $f$ over $\Q(t)$.
+Writing $d(s)=3(s^3-7s^2+12s-5)$, its polynomial pullback is
+\begin{equation}\label{eq:G3}
+ G_3(Y,s)=d(s)^7F_3(Y,3(T(s)+1)).
+\end{equation}
+It has bidegree $(65,21)$. The stored pullback uses $s\mapsto s+1$ and has
+primitive integer height $52$ digits; its exact substitution identity is
+checked separately.
+This proves the generic assertions of \cref{cor:smaller}.
+
+\subsection{A printed specialization at \texorpdfstring{$s=1$}{s=1}}\label{sec:s1}
+
+For $s=1$, so $t=1/3$ and $U=4$, the polynomial $F_3(Y,4)$ has height
+$48$ digits. Its separable reductions have types $13^5$ at $11$ and
+$1^2 7^9$ at $17$. This is a separable specialization of the regular
+$N$-cover defined by $F_3(Y,3(T(s)+1))$. Its group embeds in $N$, and the
+maximal-subgroup argument of \cref{sec:specialization} gives Galois group
+$\Sz(8)$.
+
+The monic polynomial $P_1$ in
+\texttt{data/P\_s1\_number\_field.json}, printed in \cref{app:polynomial},
+has height $43$ digits, compared with $68$ digits for the reduced generator
+at $s=0$. The file supplies $A_1\in\Q[X]$ with
+$F_3(A_1(X),4)\equiv0\pmod{P_1(X)}$. Exact irreducibility and this identity
+show that $P_1$ defines the same specialization field. Certified conjugate
+root matching gives its signature $(1,32)$, completing
+\cref{cor:smaller}. The program \texttt{scripts/check\_review\_evidence.py}
+checks these statements and compares all printed coefficients with the file.

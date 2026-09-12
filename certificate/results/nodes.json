@@ -1,0 +1,1726 @@
+{
+ "f_poly_sha256": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
+ "disc_pkl_sha256": "2155d31db9b8d78749484e4dd3b3d6dd821ced98244239f8e53abc8b3f705f0a",
+ "nodes": 342,
+ "certified": 342,
+ "failures": [],
+ "max_prec_bits": 8037,
+ "max_extra_bits": 256,
+ "parameter_boxes_pairwise_disjoint": true,
+ "all_nodes_certified": true,
+ "box_definition": "T = exact box (re +- 10^e, im +- 10^e) from the discriminant pickle, rebuilt outward at prec and widened to half-width |t| 2^-(prec - extra) + 10^e; interval Newton on S proves exactly one root of S in T",
+ "argument": "disc = c (t^2+t+1)^40 S^2 with S squarefree; at each root of S exactly one double root with F_XX != 0, so two single-valued analytic branches: trivial local monodromy",
+ "per_node": [
+  {
+   "k": 0,
+   "prec": 8018,
+   "extra_bits": 64
+  },
+  {
+   "k": 1,
+   "prec": 7998,
+   "extra_bits": 64
+  },
+  {
+   "k": 2,
+   "prec": 7787,
+   "extra_bits": 64
+  },
+  {
+   "k": 3,
+   "prec": 7715,
+   "extra_bits": 64
+  },
+  {
+   "k": 4,
+   "prec": 7120,
+   "extra_bits": 64
+  },
+  {
+   "k": 5,
+   "prec": 6904,
+   "extra_bits": 64
+  },
+  {
+   "k": 6,
+   "prec": 2638,
+   "extra_bits": 64
+  },
+  {
+   "k": 7,
+   "prec": 2614,
+   "extra_bits": 64
+  },
+  {
+   "k": 8,
+   "prec": 2580,
+   "extra_bits": 64
+  },
+  {
+   "k": 9,
+   "prec": 2481,
+   "extra_bits": 64
+  },
+  {
+   "k": 10,
+   "prec": 2331,
+   "extra_bits": 64
+  },
+  {
+   "k": 11,
+   "prec": 2228,
+   "extra_bits": 64
+  },
+  {
+   "k": 12,
+   "prec": 2134,
+   "extra_bits": 64
+  },
+  {
+   "k": 13,
+   "prec": 2105,
+   "extra_bits": 64
+  },
+  {
+   "k": 14,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 15,
+   "prec": 2093,
+   "extra_bits": 64
+  },
+  {
+   "k": 16,
+   "prec": 2225,
+   "extra_bits": 64
+  },
+  {
+   "k": 17,
+   "prec": 5579,
+   "extra_bits": 64
+  },
+  {
+   "k": 18,
+   "prec": 6252,
+   "extra_bits": 64
+  },
+  {
+   "k": 19,
+   "prec": 7419,
+   "extra_bits": 64
+  },
+  {
+   "k": 20,
+   "prec": 7538,
+   "extra_bits": 64
+  },
+  {
+   "k": 21,
+   "prec": 7895,
+   "extra_bits": 64
+  },
+  {
+   "k": 22,
+   "prec": 7938,
+   "extra_bits": 64
+  },
+  {
+   "k": 23,
+   "prec": 8037,
+   "extra_bits": 64
+  },
+  {
+   "k": 24,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 25,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 26,
+   "prec": 2111,
+   "extra_bits": 64
+  },
+  {
+   "k": 27,
+   "prec": 2111,
+   "extra_bits": 64
+  },
+  {
+   "k": 28,
+   "prec": 2186,
+   "extra_bits": 128
+  },
+  {
+   "k": 29,
+   "prec": 2186,
+   "extra_bits": 128
+  },
+  {
+   "k": 30,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 31,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 32,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 33,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 34,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 35,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 36,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 37,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 38,
+   "prec": 2029,
+   "extra_bits": 64
+  },
+  {
+   "k": 39,
+   "prec": 2029,
+   "extra_bits": 64
+  },
+  {
+   "k": 40,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 41,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 42,
+   "prec": 2174,
+   "extra_bits": 128
+  },
+  {
+   "k": 43,
+   "prec": 2174,
+   "extra_bits": 128
+  },
+  {
+   "k": 44,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 45,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 46,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 47,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 48,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 49,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 50,
+   "prec": 2037,
+   "extra_bits": 128
+  },
+  {
+   "k": 51,
+   "prec": 2037,
+   "extra_bits": 128
+  },
+  {
+   "k": 52,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 53,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 54,
+   "prec": 2151,
+   "extra_bits": 64
+  },
+  {
+   "k": 55,
+   "prec": 2151,
+   "extra_bits": 64
+  },
+  {
+   "k": 56,
+   "prec": 2008,
+   "extra_bits": 64
+  },
+  {
+   "k": 57,
+   "prec": 2008,
+   "extra_bits": 64
+  },
+  {
+   "k": 58,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 59,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 60,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 61,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 62,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 63,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 64,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 65,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 66,
+   "prec": 2099,
+   "extra_bits": 128
+  },
+  {
+   "k": 67,
+   "prec": 2099,
+   "extra_bits": 128
+  },
+  {
+   "k": 68,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 69,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 70,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 71,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 72,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 73,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 74,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 75,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 76,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 77,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 78,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 79,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 80,
+   "prec": 2177,
+   "extra_bits": 128
+  },
+  {
+   "k": 81,
+   "prec": 2177,
+   "extra_bits": 128
+  },
+  {
+   "k": 82,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 83,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 84,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 85,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 86,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 87,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 88,
+   "prec": 2002,
+   "extra_bits": 128
+  },
+  {
+   "k": 89,
+   "prec": 2002,
+   "extra_bits": 128
+  },
+  {
+   "k": 90,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 91,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 92,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 93,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 94,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 95,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 96,
+   "prec": 2099,
+   "extra_bits": 128
+  },
+  {
+   "k": 97,
+   "prec": 2099,
+   "extra_bits": 128
+  },
+  {
+   "k": 98,
+   "prec": 2097,
+   "extra_bits": 128
+  },
+  {
+   "k": 99,
+   "prec": 2097,
+   "extra_bits": 128
+  },
+  {
+   "k": 100,
+   "prec": 2022,
+   "extra_bits": 64
+  },
+  {
+   "k": 101,
+   "prec": 2022,
+   "extra_bits": 64
+  },
+  {
+   "k": 102,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 103,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 104,
+   "prec": 2038,
+   "extra_bits": 128
+  },
+  {
+   "k": 105,
+   "prec": 2038,
+   "extra_bits": 128
+  },
+  {
+   "k": 106,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 107,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 108,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 109,
+   "prec": 2000,
+   "extra_bits": 128
+  },
+  {
+   "k": 110,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 111,
+   "prec": 2000,
+   "extra_bits": 64
+  },
+  {
+   "k": 112,
+   "prec": 2043,
+   "extra_bits": 128
+  },
+  {
+   "k": 113,
+   "prec": 2043,
+   "extra_bits": 128
+  },
+  {
+   "k": 114,
+   "prec": 2006,
+   "extra_bits": 128
+  },
+  {
+   "k": 115,
+   "prec": 2006,
+   "extra_bits": 128
+  },
+  {
+   "k": 116,
+   "prec": 2026,
+   "extra_bits": 128
+  },
+  {
+   "k": 117,
+   "prec": 2026,
+   "extra_bits": 128
+  },
+  {
+   "k": 118,
+   "prec": 2101,
+   "extra_bits": 64
+  },
+  {
+   "k": 119,
+   "prec": 2101,
+   "extra_bits": 64
+  },
+  {
+   "k": 120,
+   "prec": 2194,
+   "extra_bits": 64
+  },
+  {
+   "k": 121,
+   "prec": 2194,
+   "extra_bits": 64
+  },
+  {
+   "k": 122,
+   "prec": 2187,
+   "extra_bits": 256
+  },
+  {
+   "k": 123,
+   "prec": 2187,
+   "extra_bits": 256
+  },
+  {
+   "k": 124,
+   "prec": 2016,
+   "extra_bits": 128
+  },
+  {
+   "k": 125,
+   "prec": 2016,
+   "extra_bits": 128
+  },
+  {
+   "k": 126,
+   "prec": 2014,
+   "extra_bits": 64
+  },
+  {
+   "k": 127,
+   "prec": 2014,
+   "extra_bits": 64
+  },
+  {
+   "k": 128,
+   "prec": 2058,
+   "extra_bits": 128
+  },
+  {
+   "k": 129,
+   "prec": 2058,
+   "extra_bits": 128
+  },
+  {
+   "k": 130,
+   "prec": 2193,
+   "extra_bits": 128
+  },
+  {
+   "k": 131,
+   "prec": 2193,
+   "extra_bits": 128
+  },
+  {
+   "k": 132,
+   "prec": 2015,
+   "extra_bits": 64
+  },
+  {
+   "k": 133,
+   "prec": 2015,
+   "extra_bits": 64
+  },
+  {
+   "k": 134,
+   "prec": 2025,
+   "extra_bits": 64
+  },
+  {
+   "k": 135,
+   "prec": 2025,
+   "extra_bits": 64
+  },
+  {
+   "k": 136,
+   "prec": 2107,
+   "extra_bits": 64
+  },
+  {
+   "k": 137,
+   "prec": 2107,
+   "extra_bits": 64
+  },
+  {
+   "k": 138,
+   "prec": 2187,
+   "extra_bits": 256
+  },
+  {
+   "k": 139,
+   "prec": 2187,
+   "extra_bits": 256
+  },
+  {
+   "k": 140,
+   "prec": 2027,
+   "extra_bits": 128
+  },
+  {
+   "k": 141,
+   "prec": 2027,
+   "extra_bits": 128
+  },
+  {
+   "k": 142,
+   "prec": 2132,
+   "extra_bits": 128
+  },
+  {
+   "k": 143,
+   "prec": 2132,
+   "extra_bits": 128
+  },
+  {
+   "k": 144,
+   "prec": 2183,
+   "extra_bits": 256
+  },
+  {
+   "k": 145,
+   "prec": 2183,
+   "extra_bits": 256
+  },
+  {
+   "k": 146,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 147,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 148,
+   "prec": 2184,
+   "extra_bits": 256
+  },
+  {
+   "k": 149,
+   "prec": 2184,
+   "extra_bits": 256
+  },
+  {
+   "k": 150,
+   "prec": 2036,
+   "extra_bits": 128
+  },
+  {
+   "k": 151,
+   "prec": 2036,
+   "extra_bits": 128
+  },
+  {
+   "k": 152,
+   "prec": 2032,
+   "extra_bits": 128
+  },
+  {
+   "k": 153,
+   "prec": 2032,
+   "extra_bits": 128
+  },
+  {
+   "k": 154,
+   "prec": 2039,
+   "extra_bits": 128
+  },
+  {
+   "k": 155,
+   "prec": 2039,
+   "extra_bits": 128
+  },
+  {
+   "k": 156,
+   "prec": 2035,
+   "extra_bits": 128
+  },
+  {
+   "k": 157,
+   "prec": 2035,
+   "extra_bits": 128
+  },
+  {
+   "k": 158,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 159,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 160,
+   "prec": 2185,
+   "extra_bits": 256
+  },
+  {
+   "k": 161,
+   "prec": 2185,
+   "extra_bits": 256
+  },
+  {
+   "k": 162,
+   "prec": 2183,
+   "extra_bits": 256
+  },
+  {
+   "k": 163,
+   "prec": 2183,
+   "extra_bits": 256
+  },
+  {
+   "k": 164,
+   "prec": 2183,
+   "extra_bits": 256
+  },
+  {
+   "k": 165,
+   "prec": 2183,
+   "extra_bits": 256
+  },
+  {
+   "k": 166,
+   "prec": 2043,
+   "extra_bits": 128
+  },
+  {
+   "k": 167,
+   "prec": 2043,
+   "extra_bits": 128
+  },
+  {
+   "k": 168,
+   "prec": 2188,
+   "extra_bits": 256
+  },
+  {
+   "k": 169,
+   "prec": 2188,
+   "extra_bits": 256
+  },
+  {
+   "k": 170,
+   "prec": 2156,
+   "extra_bits": 128
+  },
+  {
+   "k": 171,
+   "prec": 2156,
+   "extra_bits": 128
+  },
+  {
+   "k": 172,
+   "prec": 2190,
+   "extra_bits": 256
+  },
+  {
+   "k": 173,
+   "prec": 2190,
+   "extra_bits": 256
+  },
+  {
+   "k": 174,
+   "prec": 2096,
+   "extra_bits": 128
+  },
+  {
+   "k": 175,
+   "prec": 2096,
+   "extra_bits": 128
+  },
+  {
+   "k": 176,
+   "prec": 2187,
+   "extra_bits": 256
+  },
+  {
+   "k": 177,
+   "prec": 2187,
+   "extra_bits": 256
+  },
+  {
+   "k": 178,
+   "prec": 2180,
+   "extra_bits": 256
+  },
+  {
+   "k": 179,
+   "prec": 2180,
+   "extra_bits": 256
+  },
+  {
+   "k": 180,
+   "prec": 2189,
+   "extra_bits": 256
+  },
+  {
+   "k": 181,
+   "prec": 2189,
+   "extra_bits": 256
+  },
+  {
+   "k": 182,
+   "prec": 2052,
+   "extra_bits": 128
+  },
+  {
+   "k": 183,
+   "prec": 2052,
+   "extra_bits": 128
+  },
+  {
+   "k": 184,
+   "prec": 2055,
+   "extra_bits": 128
+  },
+  {
+   "k": 185,
+   "prec": 2055,
+   "extra_bits": 128
+  },
+  {
+   "k": 186,
+   "prec": 2065,
+   "extra_bits": 128
+  },
+  {
+   "k": 187,
+   "prec": 2065,
+   "extra_bits": 128
+  },
+  {
+   "k": 188,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 189,
+   "prec": 2182,
+   "extra_bits": 256
+  },
+  {
+   "k": 190,
+   "prec": 2056,
+   "extra_bits": 128
+  },
+  {
+   "k": 191,
+   "prec": 2056,
+   "extra_bits": 128
+  },
+  {
+   "k": 192,
+   "prec": 2056,
+   "extra_bits": 128
+  },
+  {
+   "k": 193,
+   "prec": 2056,
+   "extra_bits": 128
+  },
+  {
+   "k": 194,
+   "prec": 2072,
+   "extra_bits": 128
+  },
+  {
+   "k": 195,
+   "prec": 2072,
+   "extra_bits": 128
+  },
+  {
+   "k": 196,
+   "prec": 2315,
+   "extra_bits": 64
+  },
+  {
+   "k": 197,
+   "prec": 2315,
+   "extra_bits": 64
+  },
+  {
+   "k": 198,
+   "prec": 2067,
+   "extra_bits": 128
+  },
+  {
+   "k": 199,
+   "prec": 2067,
+   "extra_bits": 128
+  },
+  {
+   "k": 200,
+   "prec": 2073,
+   "extra_bits": 256
+  },
+  {
+   "k": 201,
+   "prec": 2073,
+   "extra_bits": 256
+  },
+  {
+   "k": 202,
+   "prec": 2071,
+   "extra_bits": 256
+  },
+  {
+   "k": 203,
+   "prec": 2071,
+   "extra_bits": 256
+  },
+  {
+   "k": 204,
+   "prec": 2066,
+   "extra_bits": 128
+  },
+  {
+   "k": 205,
+   "prec": 2066,
+   "extra_bits": 128
+  },
+  {
+   "k": 206,
+   "prec": 2065,
+   "extra_bits": 128
+  },
+  {
+   "k": 207,
+   "prec": 2065,
+   "extra_bits": 128
+  },
+  {
+   "k": 208,
+   "prec": 2072,
+   "extra_bits": 128
+  },
+  {
+   "k": 209,
+   "prec": 2072,
+   "extra_bits": 128
+  },
+  {
+   "k": 210,
+   "prec": 2169,
+   "extra_bits": 128
+  },
+  {
+   "k": 211,
+   "prec": 2169,
+   "extra_bits": 128
+  },
+  {
+   "k": 212,
+   "prec": 2075,
+   "extra_bits": 128
+  },
+  {
+   "k": 213,
+   "prec": 2075,
+   "extra_bits": 128
+  },
+  {
+   "k": 214,
+   "prec": 2084,
+   "extra_bits": 128
+  },
+  {
+   "k": 215,
+   "prec": 2084,
+   "extra_bits": 128
+  },
+  {
+   "k": 216,
+   "prec": 2074,
+   "extra_bits": 128
+  },
+  {
+   "k": 217,
+   "prec": 2074,
+   "extra_bits": 128
+  },
+  {
+   "k": 218,
+   "prec": 2094,
+   "extra_bits": 128
+  },
+  {
+   "k": 219,
+   "prec": 2094,
+   "extra_bits": 128
+  },
+  {
+   "k": 220,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 221,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 222,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 223,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 224,
+   "prec": 2076,
+   "extra_bits": 128
+  },
+  {
+   "k": 225,
+   "prec": 2076,
+   "extra_bits": 128
+  },
+  {
+   "k": 226,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 227,
+   "prec": 2079,
+   "extra_bits": 128
+  },
+  {
+   "k": 228,
+   "prec": 2185,
+   "extra_bits": 256
+  },
+  {
+   "k": 229,
+   "prec": 2185,
+   "extra_bits": 256
+  },
+  {
+   "k": 230,
+   "prec": 2112,
+   "extra_bits": 128
+  },
+  {
+   "k": 231,
+   "prec": 2112,
+   "extra_bits": 128
+  },
+  {
+   "k": 232,
+   "prec": 2081,
+   "extra_bits": 64
+  },
+  {
+   "k": 233,
+   "prec": 2081,
+   "extra_bits": 64
+  },
+  {
+   "k": 234,
+   "prec": 2088,
+   "extra_bits": 128
+  },
+  {
+   "k": 235,
+   "prec": 2088,
+   "extra_bits": 128
+  },
+  {
+   "k": 236,
+   "prec": 2104,
+   "extra_bits": 128
+  },
+  {
+   "k": 237,
+   "prec": 2104,
+   "extra_bits": 128
+  },
+  {
+   "k": 238,
+   "prec": 2092,
+   "extra_bits": 128
+  },
+  {
+   "k": 239,
+   "prec": 2092,
+   "extra_bits": 128
+  },
+  {
+   "k": 240,
+   "prec": 2223,
+   "extra_bits": 64
+  },
+  {
+   "k": 241,
+   "prec": 2223,
+   "extra_bits": 64
+  },
+  {
+   "k": 242,
+   "prec": 2106,
+   "extra_bits": 128
+  },
+  {
+   "k": 243,
+   "prec": 2106,
+   "extra_bits": 128
+  },
+  {
+   "k": 244,
+   "prec": 2201,
+   "extra_bits": 128
+  },
+  {
+   "k": 245,
+   "prec": 2201,
+   "extra_bits": 128
+  },
+  {
+   "k": 246,
+   "prec": 2110,
+   "extra_bits": 64
+  },
+  {
+   "k": 247,
+   "prec": 2110,
+   "extra_bits": 64
+  },
+  {
+   "k": 248,
+   "prec": 2291,
+   "extra_bits": 64
+  },
+  {
+   "k": 249,
+   "prec": 2291,
+   "extra_bits": 64
+  },
+  {
+   "k": 250,
+   "prec": 2112,
+   "extra_bits": 64
+  },
+  {
+   "k": 251,
+   "prec": 2112,
+   "extra_bits": 64
+  },
+  {
+   "k": 252,
+   "prec": 2126,
+   "extra_bits": 64
+  },
+  {
+   "k": 253,
+   "prec": 2126,
+   "extra_bits": 64
+  },
+  {
+   "k": 254,
+   "prec": 2252,
+   "extra_bits": 128
+  },
+  {
+   "k": 255,
+   "prec": 2252,
+   "extra_bits": 128
+  },
+  {
+   "k": 256,
+   "prec": 2198,
+   "extra_bits": 128
+  },
+  {
+   "k": 257,
+   "prec": 2198,
+   "extra_bits": 128
+  },
+  {
+   "k": 258,
+   "prec": 2144,
+   "extra_bits": 128
+  },
+  {
+   "k": 259,
+   "prec": 2144,
+   "extra_bits": 128
+  },
+  {
+   "k": 260,
+   "prec": 2286,
+   "extra_bits": 64
+  },
+  {
+   "k": 261,
+   "prec": 2286,
+   "extra_bits": 64
+  },
+  {
+   "k": 262,
+   "prec": 2291,
+   "extra_bits": 128
+  },
+  {
+   "k": 263,
+   "prec": 2291,
+   "extra_bits": 128
+  },
+  {
+   "k": 264,
+   "prec": 2347,
+   "extra_bits": 64
+  },
+  {
+   "k": 265,
+   "prec": 2347,
+   "extra_bits": 64
+  },
+  {
+   "k": 266,
+   "prec": 2192,
+   "extra_bits": 128
+  },
+  {
+   "k": 267,
+   "prec": 2192,
+   "extra_bits": 128
+  },
+  {
+   "k": 268,
+   "prec": 2242,
+   "extra_bits": 128
+  },
+  {
+   "k": 269,
+   "prec": 2242,
+   "extra_bits": 128
+  },
+  {
+   "k": 270,
+   "prec": 2198,
+   "extra_bits": 256
+  },
+  {
+   "k": 271,
+   "prec": 2198,
+   "extra_bits": 256
+  },
+  {
+   "k": 272,
+   "prec": 2164,
+   "extra_bits": 64
+  },
+  {
+   "k": 273,
+   "prec": 2164,
+   "extra_bits": 64
+  },
+  {
+   "k": 274,
+   "prec": 2326,
+   "extra_bits": 64
+  },
+  {
+   "k": 275,
+   "prec": 2326,
+   "extra_bits": 64
+  },
+  {
+   "k": 276,
+   "prec": 2217,
+   "extra_bits": 128
+  },
+  {
+   "k": 277,
+   "prec": 2217,
+   "extra_bits": 128
+  },
+  {
+   "k": 278,
+   "prec": 2214,
+   "extra_bits": 256
+  },
+  {
+   "k": 279,
+   "prec": 2214,
+   "extra_bits": 256
+  },
+  {
+   "k": 280,
+   "prec": 2228,
+   "extra_bits": 128
+  },
+  {
+   "k": 281,
+   "prec": 2228,
+   "extra_bits": 128
+  },
+  {
+   "k": 282,
+   "prec": 2194,
+   "extra_bits": 128
+  },
+  {
+   "k": 283,
+   "prec": 2194,
+   "extra_bits": 128
+  },
+  {
+   "k": 284,
+   "prec": 2288,
+   "extra_bits": 128
+  },
+  {
+   "k": 285,
+   "prec": 2288,
+   "extra_bits": 128
+  },
+  {
+   "k": 286,
+   "prec": 2256,
+   "extra_bits": 128
+  },
+  {
+   "k": 287,
+   "prec": 2256,
+   "extra_bits": 128
+  },
+  {
+   "k": 288,
+   "prec": 2196,
+   "extra_bits": 64
+  },
+  {
+   "k": 289,
+   "prec": 2196,
+   "extra_bits": 64
+  },
+  {
+   "k": 290,
+   "prec": 2225,
+   "extra_bits": 256
+  },
+  {
+   "k": 291,
+   "prec": 2225,
+   "extra_bits": 256
+  },
+  {
+   "k": 292,
+   "prec": 2227,
+   "extra_bits": 64
+  },
+  {
+   "k": 293,
+   "prec": 2227,
+   "extra_bits": 64
+  },
+  {
+   "k": 294,
+   "prec": 2238,
+   "extra_bits": 128
+  },
+  {
+   "k": 295,
+   "prec": 2238,
+   "extra_bits": 128
+  },
+  {
+   "k": 296,
+   "prec": 2236,
+   "extra_bits": 128
+  },
+  {
+   "k": 297,
+   "prec": 2236,
+   "extra_bits": 128
+  },
+  {
+   "k": 298,
+   "prec": 2236,
+   "extra_bits": 128
+  },
+  {
+   "k": 299,
+   "prec": 2236,
+   "extra_bits": 128
+  },
+  {
+   "k": 300,
+   "prec": 2238,
+   "extra_bits": 64
+  },
+  {
+   "k": 301,
+   "prec": 2238,
+   "extra_bits": 64
+  },
+  {
+   "k": 302,
+   "prec": 2247,
+   "extra_bits": 128
+  },
+  {
+   "k": 303,
+   "prec": 2247,
+   "extra_bits": 128
+  },
+  {
+   "k": 304,
+   "prec": 2277,
+   "extra_bits": 256
+  },
+  {
+   "k": 305,
+   "prec": 2277,
+   "extra_bits": 256
+  },
+  {
+   "k": 306,
+   "prec": 2248,
+   "extra_bits": 64
+  },
+  {
+   "k": 307,
+   "prec": 2248,
+   "extra_bits": 64
+  },
+  {
+   "k": 308,
+   "prec": 2250,
+   "extra_bits": 64
+  },
+  {
+   "k": 309,
+   "prec": 2250,
+   "extra_bits": 64
+  },
+  {
+   "k": 310,
+   "prec": 2265,
+   "extra_bits": 64
+  },
+  {
+   "k": 311,
+   "prec": 2265,
+   "extra_bits": 64
+  },
+  {
+   "k": 312,
+   "prec": 2334,
+   "extra_bits": 256
+  },
+  {
+   "k": 313,
+   "prec": 2334,
+   "extra_bits": 256
+  },
+  {
+   "k": 314,
+   "prec": 2430,
+   "extra_bits": 128
+  },
+  {
+   "k": 315,
+   "prec": 2430,
+   "extra_bits": 128
+  },
+  {
+   "k": 316,
+   "prec": 2335,
+   "extra_bits": 256
+  },
+  {
+   "k": 317,
+   "prec": 2335,
+   "extra_bits": 256
+  },
+  {
+   "k": 318,
+   "prec": 2379,
+   "extra_bits": 256
+  },
+  {
+   "k": 319,
+   "prec": 2379,
+   "extra_bits": 256
+  },
+  {
+   "k": 320,
+   "prec": 2598,
+   "extra_bits": 64
+  },
+  {
+   "k": 321,
+   "prec": 2598,
+   "extra_bits": 64
+  },
+  {
+   "k": 322,
+   "prec": 2435,
+   "extra_bits": 256
+  },
+  {
+   "k": 323,
+   "prec": 2435,
+   "extra_bits": 256
+  },
+  {
+   "k": 324,
+   "prec": 2442,
+   "extra_bits": 256
+  },
+  {
+   "k": 325,
+   "prec": 2442,
+   "extra_bits": 256
+  },
+  {
+   "k": 326,
+   "prec": 2484,
+   "extra_bits": 256
+  },
+  {
+   "k": 327,
+   "prec": 2484,
+   "extra_bits": 256
+  },
+  {
+   "k": 328,
+   "prec": 2506,
+   "extra_bits": 256
+  },
+  {
+   "k": 329,
+   "prec": 2506,
+   "extra_bits": 256
+  },
+  {
+   "k": 330,
+   "prec": 2481,
+   "extra_bits": 256
+  },
+  {
+   "k": 331,
+   "prec": 2481,
+   "extra_bits": 256
+  },
+  {
+   "k": 332,
+   "prec": 2478,
+   "extra_bits": 128
+  },
+  {
+   "k": 333,
+   "prec": 2478,
+   "extra_bits": 128
+  },
+  {
+   "k": 334,
+   "prec": 2589,
+   "extra_bits": 128
+  },
+  {
+   "k": 335,
+   "prec": 2589,
+   "extra_bits": 128
+  },
+  {
+   "k": 336,
+   "prec": 2545,
+   "extra_bits": 128
+  },
+  {
+   "k": 337,
+   "prec": 2545,
+   "extra_bits": 128
+  },
+  {
+   "k": 338,
+   "prec": 2626,
+   "extra_bits": 128
+  },
+  {
+   "k": 339,
+   "prec": 2626,
+   "extra_bits": 128
+  },
+  {
+   "k": 340,
+   "prec": 2718,
+   "extra_bits": 128
+  },
+  {
+   "k": 341,
+   "prec": 2718,
+   "extra_bits": 128
+  }
+ ],
+ "runtime_seconds": 8.3
+}

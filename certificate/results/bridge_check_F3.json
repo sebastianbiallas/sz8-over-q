@@ -1,0 +1,72 @@
+{
+ "candidate": "../data/F3_bridge_psi.json",
+ "sha256": {
+  "results/f_poly.json": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
+  "../data/F3_bridge_psi.json": "eb0e01e660361aa0847eae664fc764b4c9b1f01ed6ab1588f640ea36b805df81"
+ },
+ "divisor": {
+  "m": 3,
+  "n": 1
+ },
+ "degrees": {
+  "f": [
+   65,
+   7
+  ],
+  "P": [
+   65,
+   7
+  ],
+  "Psi_X": 7,
+  "Psi_Y": 7
+ },
+ "remainder_t_degree_bounds": {
+  "a": 294,
+  "b": 154,
+  "theta_f": "7/13",
+  "theta_P": "3/13",
+  "argument": "weight a*theta+b is not raised by division by the monic divisor; bound = deg_X(Q)*theta + deg_t(Q)"
+ },
+ "points": {
+  "a": 295,
+  "b": 155
+ },
+ "P_irreducible_at_t0": 0,
+ "workers": 10,
+ "P_used": "a^-65 P_can(aY + b, t) with (a, b) = (165/314, 99/157) from ../data/F3_L3P0P4.json",
+ "a": {
+  "points": 295,
+  "remainder_zero": 295,
+  "failures": [],
+  "probe_t0_0": {
+   "Q_nonzero": true,
+   "multiplicity_one": true,
+   "deg_Q": 455
+  },
+  "seconds": 248.0
+ },
+ "b": {
+  "points": 155,
+  "remainder_zero": 155,
+  "failures": [],
+  "probe_t0_0": {
+   "Q_nonzero": true,
+   "multiplicity_one": true,
+   "deg_Q": 455
+  },
+  "seconds": 289.5
+ },
+ "gates": {
+  "P_irreducible_over_Q_t": true,
+  "points_exceed_remainder_degree_bounds": true,
+  "a_remainder_zero_at_all_points": true,
+  "a_Q_nonzero": true,
+  "a_multiplicity_one": true,
+  "b_remainder_zero_at_all_points": true,
+  "b_Q_nonzero": true,
+  "b_multiplicity_one": true
+ },
+ "all_gates_pass": true,
+ "conclusion": "P is the minimal polynomial over Q(t) of a generator y of Q(C) with Psi(X, y) = 0 (proposition in the docstring)",
+ "runtime_seconds": 537.9
+}

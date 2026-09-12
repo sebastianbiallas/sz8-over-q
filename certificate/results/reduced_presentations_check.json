@@ -1,0 +1,22 @@
+{
+ "gates": {
+  "P_monic_degree_65": true,
+  "P_irreducible": true,
+  "T_of_A_zero_mod_P": true,
+  "P_height_68_digits": true,
+  "S_irreducible": true,
+  "S_height_52_digits": true,
+  "S_of_root_zero_mod_P": true,
+  "spec_file_U0_matches": true,
+  "G3_equals_den7_F3_pullback_shifted": true,
+  "height_F3_L3P0P4.json": true,
+  "height_G3_L3P0P4_pullback.json": true,
+  "bridge_bridge_check_F3.json": true
+ },
+ "all_gates_pass": true,
+ "heights_recomputed": {
+  "F3_L3P0P4.json": 47,
+  "G3_L3P0P4_pullback.json": 52
+ },
+ "runtime_seconds": 538.7
+}

@@ -1,0 +1,110 @@
+\section{Identifying the cyclic cubic quotient}\label{sec:quotient}
+
+Let $L$ be the splitting field of $f$ over $\Q(t)$ and put $M=L^N$.
+By \cref{prop:certificate}, inertia at the two finite branch points has
+order $3$, and inertia at infinity has order $13$.
+\Cref{lem:rationalquotient} gives $M=\Q(s)$. To obtain an explicit
+polynomial with group $N$, we determine $t$ as a rational function of $s$.
+
+\subsection{The fiber at infinity}\label{sec:infinity}
+
+Fix a place of $L$ above $\infty$, with inertia $I$ and decomposition
+group $D$. Tame ramification of index $13$ puts $\mu_{13}$ in its residue
+field $k$. Since the base place is rational,
+\[
+ D/I=\Gal(k/\Q)\twoheadrightarrow
+ \Gal(\Q(\zeta_{13})/\Q)\simeq C_{12}.
+\]
+On the other hand, $D\subseteq N_G(I)$ and the latter has order $156$.
+Thus $D=N_G(I)$ and $k=\Q(\zeta_{13})$.
+Moreover, $D\cap N$ has order $52$. The residue field in the cubic
+quotient is therefore the unique cubic subfield of $\Q(\zeta_{13})$,
+represented by
+\[
+ z^3+z^2-4z+1.
+\]
+The orbits of $D$ on the $65$ letters have lengths $13$ and $52$.
+The inertia group has five orbits of length $13$; $D/I$ fixes one of
+these orbits and permutes the other four transitively. The corresponding
+closed points therefore have degrees $13/13=1$ and $52/13=4$.
+Denote these points by $P_0$ and $P_4$, respectively. On the degree-$65$
+source curve the pole divisor is therefore
+\begin{equation}\label{eq:polefiber}
+ (t)_\infty=13(P_0+P_4).
+\end{equation}
+The residue field at $P_4$ is the unique quartic subfield of
+$\Q(\zeta_{13})$. Geometrically, $P_4$ becomes four points, each of
+ramification index $13$; together they account for the $52$ sheets,
+while $P_0$ accounts for the other $13$. See also \cref{fig:tower}.
+
+\subsection{Two twists and one distinguishing prime}
+
+Consider the reference cyclic cubic cover
+\begin{equation}\label{eq:shanks}
+ u^3-3tu^2-(3t+3)u-1=0.
+\end{equation}
+Its discriminant is $81(t^2+t+1)^2$, its deck group is constant $C_3$,
+and its fiber at infinity consists of three rational points. Over
+$\overline{\Q}$, a cyclic cubic cover with these two branch points is
+unique up to isomorphism over the base. Its $\Q$-forms are consequently
+classified by
+\[
+ H^1(\Q,C_3)=\operatorname{Hom}_{\mathrm{cont}}
+ (\Gal(\overline{\Q}/\Q),C_3),
+\]
+because the deck group is constant.  The split fiber over infinity is a
+$C_3$-torsor.  Twisting by a character $\chi$ changes its Galois action
+from the trivial action to translation by $\chi$; when $\chi$ is
+surjective, its residue field is therefore the fixed field of
+$\ker(\chi)$.  Requiring this field to be the conductor-$13$ cubic field
+$K$ leaves precisely the two isomorphisms
+$\Gal(K/\Q)\simeq C_3$, which are inverse to one another.  One can
+construct their twists over
+the cyclic cubic field $K=\Q[z]/(z^3+z^2-4z+1)$: if $\tau$ generates
+$\Gal(K/\Q)$ and $\rho(u)=-1/(u+1)$ generates the deck group of
+\eqref{eq:shanks}, descend $K(u)$ by the semilinear actions
+$(\tau,\rho)$ and $(\tau,\rho^{-1})$. Rational coordinates on the two
+fixed fields give the following maps, whose discriminants and fibers
+provide exact checks of the construction:
+\begin{align}
+ T_1(s)&=\frac{-4s^3+6s^2+36s-6}{3(s^3+5s^2-9s-5)},\label{eq:T1}\\
+ T_2(s)&=\frac{s^3+6s^2-27s+21}{3(s^3-7s^2+12s-5)}.\label{eq:T2}
+\end{align}
+Writing $T_i=n_i/d_i$ with the displayed numerators and denominators,
+the exact identities
+\[
+ \disc_s(n_1-td_1)=936^2(t^2+t+1)^2,\qquad
+ \disc_s(n_2-td_2)=117^2(t^2+t+1)^2
+\]
+verify their branch loci and cyclicity. Both denominator fields are
+isomorphic to the conductor-$13$ field above. Their fibers at $t=0$
+are the distinct cyclic cubic fields represented by $z^3-39z-26$ and
+$z^3-39z-91$, respectively. Both have field discriminant $117^2$, hence
+conductor $117=9\cdot13$: they combine the conductor-$9$ fiber of the
+reference cover at $t=0$ with the two conductor-$13$ characters.
+The accompanying program
+\texttt{scripts/check\_cubic\_maps.py} checks these discriminants and
+field isomorphisms exactly with PARI/GP.
+
+At a prime of separable reduction, the fiber of $M$ over $t=0$ splits
+if and only if the Frobenius element of $f(X,0)$ belongs to $N$.
+Every element of $G\setminus N$ has order divisible by $3$, and $N$ has
+no element of order $3$. Thus membership is read from the factor degrees:
+the Frobenius belongs to $N$ precisely when none is divisible by $3$.
+
+At $p=29$, the factorization type of $f(X,0)$ is $1\,2^2\,6^{10}$, so
+Frobenius lies outside $N$. The cubic for $T_1$ splits modulo $29$,
+whereas the cubic for $T_2$ does not. Since the two twists exhaust the
+possibilities, this single splitting test identifies $M$ with $\Q(s)$
+via $t=T_2(s)$.
+
+The equality $L^N=\Q(s)$ proves that $L/\Q(s)$ is regular with group
+$N$. Since $N$ is transitive on the $65$ roots, $f(X,T_2(s))$ is
+irreducible. For a polynomial with coefficients in $\Q[s]$ we clear
+denominators:
+\begin{equation}\label{eq:g}
+ g(X,s)=\bigl(3(s^3-7s^2+12s-5)\bigr)^7 f(X,T_2(s)).
+\end{equation}
+The polynomial $g$ has bidegree $(65,21)$ and the same splitting field.
+Its leading coefficient in $X$ is the displayed seventh power; the
+monic polynomial is $f(X,T_2(s))\in\Q(s)[X]$.

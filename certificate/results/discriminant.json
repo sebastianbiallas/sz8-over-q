@@ -1,0 +1,30 @@
+{
+ "f_poly": "results/f_poly.json",
+ "f_poly_sha256": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
+ "degree_D": 764,
+ "multiplicity_t2_t_1": 40,
+ "degree_S": 342,
+ "S_squarefree": true,
+ "D1_equals_c_S_squared": true,
+ "extra_point_checks": true,
+ "roots_total": 342,
+ "roots_certified": 342,
+ "roots_pairwise_disjoint": true,
+ "min_rad_exp10": -8800,
+ "max_rad_exp10": -8766,
+ "roots_method": "PARI polroots at 9000 digits; each root certified by an interval Newton step in arb at 100000 bits on the exact rational box |Re t - re|, |Im t - im| <= 10^rad_exp10 (re, im the exact decimal strings)",
+ "prec_bits": 100000,
+ "max_coefficient_digits_D": 16485,
+ "max_coefficient_digits_S": 7524,
+ "gates": {
+  "extra_point_checks": true,
+  "D1_equals_c_S_squared": true,
+  "S_squarefree": true,
+  "multiplicity_40": true,
+  "degree_S_342": true,
+  "all_roots_certified": true,
+  "roots_pairwise_disjoint": true
+ },
+ "runtime_seconds": 512.3,
+ "all_gates_pass": true
+}

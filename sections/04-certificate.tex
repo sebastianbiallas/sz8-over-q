@@ -1,0 +1,215 @@
+\section{An independent certificate for the polynomial}\label{sec:certificate}
+
+Starting from the coefficients of $f$, we determine its discriminant,
+remove the apparent branch points, and certify two monodromy permutations.
+Their group then gives both geometric monodromy and regularity.
+Put $q(t)=t^2+t+1$.
+
+\begin{proposition}[Computational certificate]\label{prop:certificate}
+The following statements hold for $f$.
+\begin{enumerate}[label=\textup{(\roman*)},leftmargin=*]
+\item Its exact $X$-discriminant is
+\begin{equation}\label{eq:discriminant}
+ \disc_X(f)=c\,q(t)^{40}S(t)^2,
+\end{equation}
+where $c\in\Q^\times$, $S\in\Q[t]$ is monic and squarefree of degree
+$342$, and $\gcd(S,q)=1$.
+\item At each root $a$ of $S$, $f(X,a)$ has exactly one repeated root,
+and that root has multiplicity exactly $2$.
+\item Over $\Q(\zetaT)$ one has
+$f(X,\zetaT)=f_5(X)f_{20}(X)^3$, with distinct irreducible factors of the
+indicated degrees, and
+$\Res_X(f_{20},f_t(X,\zetaT))\ne0$.
+\item Continuation from $t=0$ along standard meridians around $\zetaT$
+and $\zetaT^2$ gives permutations $\sigma_1,\sigma_2$ of type
+$1^5 3^{20}$. With permutations composed from left to right,
+$\sigma_\infty=(\sigma_1\sigma_2)^{-1}$ has type $13^5$, and they generate a
+transitive primitive group of order $87360$.
+\end{enumerate}
+\end{proposition}
+
+The following computations establish the proposition; the programs and
+exact outputs are documented in \cref{sec:computation}.
+
+\subsection{The exact discriminant}
+
+The general discriminant degree bound is
+$\deg_t\disc_X(f)\leq2(65-1)7=896$.
+Exact evaluations at $897$ distinct rational values of $t$ and exact
+interpolation therefore determine the discriminant. Additional evaluations
+check the interpolation.
+Exact division and gcd computations give \eqref{eq:discriminant},
+squarefreeness, and coprimality. The resulting discriminant has degree
+$764=80+2\cdot342$.
+
+\subsection{Nodes of the plane model}
+
+\begin{lemma}\label{lem:node}
+Let $F(X,t)$ be monic in $X$ with coefficients holomorphic near $t=a$.
+Suppose $\ord_{t=a}\disc_X(F)=2$ and $F(X,a)$ has exactly one repeated
+root, of multiplicity $2$. Then the normalization of $F(X,t)=0$ is
+unramified above $a$.
+\end{lemma}
+\begin{proof}
+Separate the simple roots holomorphically. Weierstrass preparation at the
+double root reduces the remaining two roots to a quadratic factor
+$X^2+u(t)X+v(t)$, after translating $X$. Its discriminant has order exactly
+$2$, because the discriminants and mutual resultants of the other factors
+are units. Thus
+$u(t)^2-4v(t)=(t-a)^2w(t)$ with $w(a)\ne0$. A local holomorphic square root
+of $w$ gives the two roots
+\[
+ \frac{-u(t)\pm(t-a)\sqrt{w(t)}}{2}.
+\]
+They are single-valued holomorphic functions of $t$.
+\end{proof}
+
+There is an exact modular check of \cref{prop:certificate}\textup{(ii)}.
+Let $B(t)$ be the first principal subresultant coefficient of $f$ and
+$f_X$, considered as polynomials in $X$. At a root $a$ of $S$, their
+resultant vanishes, and $B(a)\ne0$ is equivalent to
+$\deg\gcd(f(X,a),f_X(X,a))=1$. In characteristic zero this degree is
+$\sum_j(m_j-1)$, where $m_j$ are the root multiplicities. Degree one
+therefore means exactly one double root, with all other roots simple.
+
+It suffices to prove $\Res_t(S,B)\ne0$ modulo one suitable prime.
+At $p=1000003$, exact discriminant interpolation modulo $p$ gives degree
+$764$ and the shape $\bar c\,\bar q^{40}\bar S^2$, with $\bar S$ monic
+and squarefree of degree $342$ and coprime to $\bar q$.
+The full-degree reduction ensures that the characteristic-zero monic
+factor $S$ is $p$-integral and reduces to this $\bar S$.
+Its irreducible factors have degrees
+\[
+ 1,\ 3,\ 5,\ 14,\ 78,\ 84,\ 157.
+\]
+For every factor $P$, the gcd of $\bar f$ and $\bar f_X$ over
+$\mathbb F_p[t]/(P)$ has degree one. Subresultants commute with these
+specializations because the leading coefficients $1$ and $65$ remain
+units. Hence $\bar B$ is nonzero at every root of $\bar S$, proving the
+required nonvanishing in characteristic zero. The independent verifier
+\texttt{scripts/check\_nodes\_modp.py} runs this finite-field calculation
+from the coefficients of $f$; it uses the exact discriminant identity
+\eqref{eq:discriminant} to draw its characteristic-zero conclusion.
+
+The certificate also contains an interval proof. For each root
+of $S$, it first certifies a parameter rectangle
+$T$ containing exactly one root by interval Newton on $S$. The $342$
+rectangles are pairwise disjoint, hence account for all roots of $S$.
+It then isolates all $64$ roots of $f_X(X,t)$ uniformly for $t\in T$ in
+disjoint rectangles. The value of $f$ excludes zero on all but one of
+these rectangles, and $f_{XX}$ excludes zero on the remaining rectangle.
+The vanishing of the discriminant supplies existence of a repeated root;
+these tests establish its uniqueness and multiplicity.
+
+The enclosure conventions are recorded in \cref{sec:implementation}.
+Together with \cref{lem:node}, either test proves that the normalized cover has
+no finite branch point outside $\{\zetaT,\zetaT^2\}$.
+
+At a root of $f_{20}$ over $t=\zeta_3$, the nonvanishing of $f_t$ in
+\cref{prop:certificate}\textup{(iii)} makes the plane curve smooth and
+expresses $t-\zeta_3$ as a function with a zero of order $3$ in a local
+$X$-coordinate. The twenty such points account for discriminant order
+$20(3-1)=40$. The five simple roots are unramified. Complex conjugation
+gives the same description over $\zeta_3^2$.
+
+\subsection{Certified continuation}
+
+The base point is $t=0$. A \emph{standard meridian} goes from the base
+point along a tail to a small neighborhood of one branch point, makes one
+counter-clockwise circuit, and returns along the same tail. Here the tails
+are straight, with entry point $z-\varepsilon z/|z|$ for
+$z=\zeta_3,\zeta_3^2$; the circuits are inscribed polygons in disjoint
+small neighborhoods of the branch points. Path parameters are recorded
+in \cref{sec:implementation}.
+The two meridians wind once about their respective branch point and zero
+times about the other, and form a generating system for the thrice-punctured
+sphere. Apparent branch points have already been removed by \cref{lem:node}.
+
+At a parameter value $t_0$, isolate the roots of $f(X,t_0)$ in rectangles
+with centers $c_i$ and enclosing Euclidean radii $r_i$.
+Choose disjoint discs $|X-c_i|<R_i$ containing those rectangles.
+On the $i$th boundary circle, the monic factorization gives
+\begin{equation}\label{eq:lower}
+ |f(X,t_0)|\geq
+ (R_i-r_i)\prod_{\ell\ne i}(|c_i-c_\ell|-R_i-r_\ell).
+\end{equation}
+For each $1\leq j\leq7$, isolate the roots of $\partial_t^j f(X,t_0)$.
+If its leading coefficient is $a_j$ and its roots have centers $b_{j\ell}$,
+enclosing radii $\rho_{j\ell}$, and multiplicities $m_{j\ell}$, then
+\[
+ |\partial_t^j f(X,t_0)|\leq
+ |a_j|\prod_\ell
+ (|c_i-b_{j\ell}|+R_i+\rho_{j\ell})^{m_{j\ell}}.
+\]
+The Taylor expansion in $t$ terminates at degree $7$. Bounding its $j$th
+term by $h^j/j!$ times this product gives a Rouch\'e test valid for every
+$|t-t_0|\leq h$. For each candidate radius, bisection selects $h$ such
+that the sum of the seven upper bounds is strictly below \eqref{eq:lower};
+the common step is the minimum over all roots. Factoring the
+$t$-derivatives avoids severe cancellation losses in bounds obtained from
+absolute values of coefficients.
+
+Each accepted endpoint is checked in ball arithmetic to lie within the
+certified parameter displacement. Isolated endpoint roots are matched by
+containment in the preceding discs. Thus labels persist along the whole
+path. The resulting permutations are supplied in
+\texttt{data/monodromy.json}.
+
+There is a useful symmetry check. Let $c$ be complex conjugation on the
+isolated roots of $f(X,0)$. The two meridians are conjugate up to homotopy
+with reversed orientation, so
+\[
+ \sigma_2=c\,\sigma_1^{-1}c.
+\]
+Matching conjugate root enclosures gives an involution of type $1\,2^{32}$,
+and the permutations obtained by tracking both loops satisfy this
+identity exactly.
+
+\subsection{Geometric group and regularity}
+
+By \cref{lem:node}, the two meridians generate the fundamental group
+needed for the normalized cover. Transitivity of their action proves
+connectedness. The GAP primitive-group library has $13$ groups of degree
+$65$; exactly one has order $87360$, namely $G=\Sz(8)\rtimes C_3$.
+This identifies the geometric monodromy in
+\cref{prop:certificate}\textup{(iv)}.
+
+The arithmetic monodromy contains $G$ normally and is contained in
+$N_{S_{65}}(G)$. This normalizer is $G$ itself. One can see this
+without a second search: the simple derived subgroup $N$ is characteristic
+in $G$, the centralizer of its nonregular doubly transitive action is
+trivial, and $\Aut(N)=G$. Conjugation therefore embeds the normalizer in
+$G$, while it already contains $G$. Arithmetic and geometric monodromy
+coincide, proving the first assertion of \cref{thm:main}.
+
+\subsection{Two genus checks from the plane equation}
+Write $f=\sum_{j=0}^7 C_j(X)t^j$. Exact factorization gives
+$C_7=aH(X)^{13}$ with $H$ an irreducible separable quartic, and
+$\gcd(H,C_6)=1$. In the chart $u=1/t$, the equation
+$u^7f(X,1/u)=0$ is consequently smooth at the four roots of $H$ on $u=0$,
+with $u$ vanishing to order $13$. At $(X,t)=(\infty,\infty)$, put
+$v=1/X$. The lowest terms of $v^{65}u^7f(1/v,1/u)$ for weights
+$\mathrm{wt}(v)=7$, $\mathrm{wt}(u)=13$ are $u^7+av^{13}$.
+Since $7$ and $13$ are coprime, this is one branch with
+$\delta=(7-1)(13-1)/2=36$. These coefficient checks are included in
+\texttt{scripts/check\_review\_evidence.py}.
+
+The $342$ points in \cref{lem:node} are ordinary nodes: the two local roots
+have distinct derivatives in $t$. All remaining points are smooth by the
+preceding local checks. The closure in $\PP^1\times\PP^1$ has arithmetic
+genus $(65-1)(7-1)=384$, so its geometric genus is
+\[
+ 384-342-36=6.
+\]
+There is also a discriminant-degree check. The thirteen unbounded roots
+grow like $t^{7/13}$; the other fifty-two approach the four distinct roots
+of $H$, with differences within each group of thirteen of order
+$t^{-1/13}$. Thus the squared pairwise differences give
+\[
+ \deg_t\disc_X(f)
+ =2\binom{13}{2}\frac7{13}
+  +2(13\cdot52)\frac7{13}
+  -2\left(4\binom{13}{2}\right)\frac1{13}
+ =84+728-48=764.
+\]
+Both checks agree with the certified discriminant and branch cycles.

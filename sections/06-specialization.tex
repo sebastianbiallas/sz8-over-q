@@ -1,0 +1,49 @@
+\section{A number field with group \texorpdfstring{$\Sz(8)$}{Sz(8)}}\label{sec:specialization}
+
+We complete \cref{thm:main} with a rational fiber of the regular family.
+Specialize $s=0$ in \eqref{eq:T2}, so $t=-7/5$, and put
+$h(X)=f(X,-7/5)$. This is a monic degree-$65$ polynomial in
+$\Z[1/65][X]$. Its reductions at $11$ and $31$ are separable and have
+the following factorizations by degree:
+\begin{center}
+\begin{tabular}{@{}ccc@{}}
+\toprule
+Prime&Factorization type&Frobenius order\\
+\midrule
+$11$&$1^2 7^9$&$7$\\
+$31$&$13^5$&$13$\\
+\bottomrule
+\end{tabular}
+\end{center}
+Separability at either prime proves separability over $\Q$. The map $T$
+has no pole at $s=0$, and $h$ is separable, so this is an unramified
+specialization of the generic splitting field. Its Galois group
+$H$ embeds in $N$. The two reductions give elements of orders $7$ and
+$13$ in $H$, so $91$ divides $|H|$.
+
+The maximal subgroups of $N$ have orders
+\[
+ 448,\qquad52,\qquad20,\qquad14.
+\]
+None is divisible by $91$. Hence $H=N$, proving the final assertion of
+\cref{thm:main}.
+
+The degree-$65$ field $\Q[X]/(h)$ has signature $(1,32)$.
+Indeed, complex conjugation on the roots over the real base point $t=0$
+has type $1\,2^{32}$, as certified by conjugate root enclosures.
+There is no finite real branch point on the normalization, so this action
+has the same cycle type along the real $t$-line. In particular, every
+separable real specialization of $f$ has exactly one real root. The
+verifier also checks the signature directly at $t=-7/5$.
+
+For $s=0$, the monic integral polynomial $P$ in
+\texttt{data/P\_number\_field.json} has degree $65$ and height $68$ digits.
+It defines the same field as $h(X)=f(X,-7/5)$, whose primitive integer
+height is $252$ digits. The file gives a rational polynomial $A$ taking
+its root to a root of $h$; exact composition modulo the defining polynomial
+and irreducibility verify the field isomorphism. An inverse is also
+recorded.
+
+Hilbert irreducibility also supplies infinitely many $\Sz(8)$ extensions
+from the regular family. The specialization above gives a specific example
+without requiring an ineffective choice of parameter.
