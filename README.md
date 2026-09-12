@@ -83,6 +83,10 @@ The discriminant pickle is stored as `certificate/results/discriminant.pkl.gz`. 
 
 The repository contains the independent certificate for the polynomial theorem. The discovery computations (the triangle-group engine, the exact genus-six model, and the modular reconstruction engine) are not included; they are not needed to verify the main theorem. Section 7 describes them and gives the prime counts and controls for the relevant Riemann--Roch computations.
 
+## arXiv submission bundle
+
+Run `make arxiv-bundle` to create `dist/sz8-over-q-arxiv.tar.gz`. The archive contains the LaTeX source and every `.json` and `.json.gz` file from `data/` and `certificate/`, placed below arXiv's top-level `anc/` directory. The generated `anc/README.txt` identifies the repository and explains the preserved paths.
+
 ## License
 
 MIT; see `LICENSE`.

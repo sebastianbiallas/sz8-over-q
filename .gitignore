@@ -12,6 +12,7 @@
 __pycache__/
 .venv/
 tmp/
+dist/
 certificate/results/*.pkl
 certificate/results/discriminant_S.gp
 certificate/results/fibre.gp
