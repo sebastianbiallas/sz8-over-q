@@ -14,7 +14,7 @@ REPOSITORY = "https://github.com/sebastianbiallas/sz8-over-q"
 
 
 def source_files() -> list[Path]:
-    files = [ROOT / "main.tex", ROOT / "references.bib"]
+    files = [ROOT / "main.tex", ROOT / "references.bib", ROOT / "LICENSE"]
     files.extend(sorted((ROOT / "sections").glob("*.tex")))
     return files
 
@@ -50,6 +50,8 @@ def main() -> None:
         "The paths below anc/ preserve their locations in the proof repository.\n"
         "They comprise every .json and .json.gz file in data/ and certificate/.\n"
         "File formats and verification stages are described in Section 8 of the paper.\n"
+        "The ancillary data and recorded results are released under CC0 1.0.\n"
+        "See the top-level LICENSE file for the complete path-based licensing terms.\n"
         f"Repository: {REPOSITORY}\n"
     ).encode("utf-8")
 

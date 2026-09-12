@@ -89,4 +89,6 @@ Run `make arxiv-bundle` to create `dist/sz8-over-q-arxiv.tar.gz`. The archive co
 
 ## License
 
-MIT; see `LICENSE`.
+The paper and documentation are licensed under CC BY 4.0, the exact data and
+recorded results are released under CC0 1.0, and the verification software is
+licensed under the MIT License. See `LICENSE` for the precise path-based terms.
