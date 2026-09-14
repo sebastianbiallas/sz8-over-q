@@ -1,0 +1,36 @@
+# Build products, the local compiler and dependency checkouts.
+/.lake/
+/lean-4.34.0-rc2-darwin_aarch64/
+/lean-toolchain.tar.zst
+__pycache__/
+
+# Verification outputs.
+/verification.json
+/verification.log
+/build-batches.jsonl
+/full_build.log
+
+# Generated files: `python3 tools/generate.py` (or `make lean-data`) rebuilds them, and
+# provenance/generated.json pins their hashes.
+/input-report.json
+/step-report.json
+/Sz8/Monodromy/Meridian/*.lean
+/Sz8/Monodromy/ContinuationStep0.lean
+/Sz8/Monodromy/GroupCerts.lean
+/Sz8/Monodromy/Inputs.lean
+/Sz8/Monodromy/IntColumns.lean
+/Sz8/Monodromy/IrredCerts.lean
+/Sz8/Monodromy/Modular.lean
+/Sz8/Monodromy/MonodromyData.lean
+/Sz8/Monodromy/NinetyOneCerts.lean
+/Sz8/Monodromy/NormalizerCerts.lean
+/Sz8/Monodromy/Shift[0-7].lean
+/Sz8/Monodromy/SpecCerts.lean
+/Sz8/Monodromy/StepData.lean
+/Sz8/Galois/EncData[0-6].lean
+/Sz8/Galois/ThetaData[0-6].lean
+/Sz8/Galois/NodeData.lean
+/Sz8/Galois/Resolvent.lean
+/Sz8/Galois/SepData.lean
+/Sz8/Galois/Stab13Data.lean
+/Sz8/Galois/SuzukiData.lean

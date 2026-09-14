@@ -1,0 +1,19 @@
+name = "sz8"
+version = "0.1.0"
+defaultTargets = ["Sz8"]
+
+[[require]]
+name = "hex-roots-mathlib"
+git = "https://github.com/leanprover/hex-roots-mathlib.git"
+rev = "f99ad7ede4403e2dc20be5959d1adcd6e4e80c37"
+
+[[require]]
+name = "HexBerlekampMathlib"
+git = "https://github.com/leanprover/hex-berlekamp-mathlib.git"
+rev = "v0.5.0"
+
+# Sz8.Monodromy: the certified inputs (modular factorizations, the Galois-order divisibility, continuation
+# steps, the two meridians, and the group certificates).
+# Sz8.Galois: the generic Galois group, the specialization theorem, and the identification with Sz(8).
+[[lean_lib]]
+name = "Sz8"

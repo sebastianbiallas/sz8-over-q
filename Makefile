@@ -1,4 +1,4 @@
-.PHONY: all paper check cubic nodes review-check certificate reduced manifest arxiv-bundle clean
+.PHONY: all paper check cubic nodes review-check certificate reduced manifest arxiv-bundle clean lean-data lean-verify
 all: paper
 paper:
 	latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
@@ -17,6 +17,10 @@ reduced:
 	python3 scripts/run_reduced_presentations.py --workers 6
 manifest:
 	python3 scripts/write_manifest.py
+lean-data:
+	python3 lean/tools/generate.py
+lean-verify:
+	cd lean && python3 verify.py
 arxiv-bundle:
 	python3 scripts/build_arxiv_bundle.py
 clean:
