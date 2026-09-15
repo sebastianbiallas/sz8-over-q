@@ -24,15 +24,6 @@ make paper
 
 This needs a TeX installation with `latexmk`, `pdflatex` and BibTeX. The order of the `\input` lines in `main.tex` sets the reading order. The numeric prefixes of the source files are kept because the verification scripts use them.
 
-| Section | Contents |
-| --- | --- |
-| 1 | Introduction |
-| 2–5 | Proof of the main theorem |
-| 6 | Smaller presentations corollary |
-| 7 | Discovery |
-| 8 | Reproducibility and the proof package |
-| Appendix A | The smaller s = 1 number-field polynomial |
-
 ## Quick check
 
 `data/f.json`, `data/g.json` and `data/monodromy.json` are the compact public inputs. The certificate programs read byte-identical copies in `certificate/results/f_poly.json` and `certificate/results/g_poly.json`.
