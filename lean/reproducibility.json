@@ -1,0 +1,1978 @@
+{
+  "schema": 2,
+  "description": "Clean rebuild of the Lean project from an isolated copy of the repository: sources, generated files, inputs, toolchain, dependency revisions, build commands and audit results.",
+  "checkout": {
+    "repository_commit": "3d24b9b3ef47a3dcbacbd1a2b5cbbecd74c0c05c",
+    "uncommitted_tracked_changes": [
+      " M LICENSE",
+      " M Makefile",
+      " M README.md",
+      " M certificate/results/bridge_check_F3.json",
+      " M certificate/results/reduced_presentations_check.json"
+    ],
+    "method": "the files git tracks or would add (`tools/snapshot.py copy-repo`); discriminant.pkl restored by scripts/restore_discriminant.py; generated files rebuilt by `make lean-data` and checked against provenance/generated.json; compiler extracted from lean-toolchain.tar.zst; .lake/packages cloned from the working tree after checking lake-manifest.json revisions (Mathlib and Hex are not recompiled); empty .lake/build.",
+    "notes": [
+      "lean/README.md (timing figures) was edited after the build and copied into the build copy before this manifest was written; it is not read by the build or verify.py.",
+      "The repository_commit is the base commit; lean/ was not yet committed. The source hashes were checked against the build copy."
+    ]
+  },
+  "public_inputs": {
+    "data/f.json": "2350ceddd037360737a347aba2deeb40bbda7d7917e139e8e1f1783abd947870",
+    "data/monodromy.json": "56334509e81f502d6b9b202febc434b21df8bf13981142f0dab6a322795c33d2",
+    "certificate/manifest.json": "64429523c159872fa141524a0779c89828dfcd7178f23129716c8e85c87d7b23",
+    "certificate/results/discriminant.pkl.gz": "222b89c7c19adbccb57d84883cfbffe542ec6aa87ca651157245eea70249acd0",
+    "certificate/results/discriminant.pkl": "2155d31db9b8d78749484e4dd3b3d6dd821ced98244239f8e53abc8b3f705f0a",
+    "certificate/results/monodromy.json": "b848d817322ac168eb20b17009ddfa0729120a89858aa6a7a058532cecd9321d",
+    "scripts/restore_discriminant.py": "15f2d54bb9c3973e23ab3a5476de61f27d9e4efb729010f33468973505c61bd2"
+  },
+  "toolchain": {
+    "lean-toolchain": "leanprover/lean4:v4.34.0-rc2",
+    "compiler_archive_sha256": "ca79a92a15c56d0270d9cdba936a07933efd14a7de635b55b09801979ce73909"
+  },
+  "tools": {
+    "python": "3.11.9",
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "machine": "arm64",
+    "memory_bytes": 34359738368,
+    "cpus": 12,
+    "lean": "Lean (version 4.34.0-rc2, arm64-apple-darwin24.6.0, commit 6a10ac8c22beadecabdbb0919c2b50214762f91d, Release)",
+    "lake": "Lake version 5.0.0-src+6a10ac8 (Lean version 4.34.0-rc2)",
+    "pari_gp": "2.17.4",
+    "python_sympy": "1.11.1",
+    "python_flint": "0.9.0"
+  },
+  "dependencies": [
+    {
+      "name": "HexBerlekampMathlib",
+      "url": "https://github.com/leanprover/hex-berlekamp-mathlib.git",
+      "rev": "7f87357b611ae9be0d9effd2c89608c2dcf78bd6",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "«hex-roots-mathlib»",
+      "url": "https://github.com/leanprover/hex-roots-mathlib.git",
+      "rev": "f99ad7ede4403e2dc20be5959d1adcd6e4e80c37",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "mathlib",
+      "url": "https://github.com/leanprover-community/mathlib4.git",
+      "rev": "85e3a25e006c35636f0e53b0e9296caca2685bc0",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexPolyFpMathlib",
+      "url": "https://github.com/leanprover/hex-poly-fp-mathlib.git",
+      "rev": "5f91f9040f91b87d966e3fa09a5b2838a8c54448",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexModArithMathlib",
+      "url": "https://github.com/leanprover/hex-mod-arith-mathlib.git",
+      "rev": "7c36b40fd9f95d3d950b5acafba48890d02e33af",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexPolyMathlib",
+      "url": "https://github.com/leanprover/hex-poly-mathlib.git",
+      "rev": "2a7713846674a18532d980a2794b74a68ff1589c",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexBerlekamp",
+      "url": "https://github.com/leanprover/hex-berlekamp.git",
+      "rev": "e04aa62776ccfaded3fc051bb2284d38fb26e144",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexPolyZMathlib",
+      "url": "https://github.com/leanprover/hex-poly-z-mathlib.git",
+      "rev": "5bc11397d62065aa8d3f6220f67281666ef44e6c",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexRoots",
+      "url": "https://github.com/leanprover/hex-roots.git",
+      "rev": "557e458df98e48138c2f2d8cc9a386a43391cf87",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "plausible",
+      "url": "https://github.com/leanprover-community/plausible",
+      "rev": "d9598f07b1bc701f1e3aae163d2681c1fd978793",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "LeanSearchClient",
+      "url": "https://github.com/leanprover-community/LeanSearchClient",
+      "rev": "ba67e212be1197b84c1f1f6299488a10a3002713",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "importGraph",
+      "url": "https://github.com/leanprover-community/import-graph",
+      "rev": "d8823026ac7ef130c253089d95685f9877b95323",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "proofwidgets",
+      "url": "https://github.com/leanprover-community/ProofWidgets4",
+      "rev": "a8acbfd87375ff4abe14ce09db5b7664d383bc7f",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "aesop",
+      "url": "https://github.com/leanprover-community/aesop",
+      "rev": "18889deb9e83ea7420ef51c160d6f88552e744e3",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "Qq",
+      "url": "https://github.com/leanprover-community/quote4",
+      "rev": "507746ab8f4b643ccdacb2ec4cdb5853fa9f8ab3",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "batteries",
+      "url": "https://github.com/leanprover-community/batteries",
+      "rev": "d54dddc581e08be364c278052863524bff7a99a9",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexPolyFp",
+      "url": "https://github.com/leanprover/hex-poly-fp.git",
+      "rev": "b4e58d0fa029fe197a17b67c7f768123d3efc78f",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexModArith",
+      "url": "https://github.com/leanprover/hex-mod-arith.git",
+      "rev": "ecf6f6abd38574eefa90315ba6495a9ebdd30622",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexPoly",
+      "url": "https://github.com/leanprover/hex-poly.git",
+      "rev": "9885a8b6af5c209d66a08a660e300c38dd7d31e3",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexArith",
+      "url": "https://github.com/leanprover/hex-arith.git",
+      "rev": "28ee623fae982665bc46301eaa50057c1ead224a",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexBasic",
+      "url": "https://github.com/leanprover/hex-basic.git",
+      "rev": "38d0794d2a3dae4ca080b40e0694d212cc357f33",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexGFqRing",
+      "url": "https://github.com/leanprover/hex-gfq-ring.git",
+      "rev": "5da680c978d29efac2566573fb0b781eec910735",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexRowReduce",
+      "url": "https://github.com/leanprover/hex-row-reduce.git",
+      "rev": "e0457cf4a48eecc7c78922cef6f5f8616f0e9a42",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexMatrix",
+      "url": "https://github.com/leanprover/hex-matrix.git",
+      "rev": "3ce0f3dcaf3b51a23af13aa15f8524f387aa015f",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexHensel",
+      "url": "https://github.com/leanprover/hex-hensel.git",
+      "rev": "15d2fcfaef006b76126b845992f91fcd5c03183d",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "HexPolyZ",
+      "url": "https://github.com/leanprover/hex-poly-z.git",
+      "rev": "7a14f49ff6f8cc3eb13640aebba6e04d0bed1fcb",
+      "matches_manifest": true,
+      "clean": true
+    },
+    {
+      "name": "Cli",
+      "url": "https://github.com/leanprover/lean4-cli",
+      "rev": "ab3a82db9fea14cf0fd7f5a2de650f4b534640af",
+      "matches_manifest": true,
+      "clean": true
+    }
+  ],
+  "build": {
+    "commands": [
+      "make lean-data",
+      "sh lean/tools/full_build.sh  (batched builds, then python3 verify.py)"
+    ],
+    "verify_commands": [
+      {
+        "command": [
+          "python3",
+          "-m",
+          "unittest",
+          "test_verify.py",
+          "test_export_provenance.py"
+        ],
+        "exit_code": 0,
+        "seconds": 0.206
+      },
+      {
+        "command": [
+          "python3",
+          "export_inputs.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.333
+      },
+      {
+        "command": [
+          "python3",
+          "export_step.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.127
+      },
+      {
+        "command": [
+          "python3",
+          "export_monodromy.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.028
+      },
+      {
+        "command": [
+          "python3",
+          "export_groups.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.302
+      },
+      {
+        "command": [
+          "python3",
+          "export_sylow.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 8.337
+      },
+      {
+        "command": [
+          "python3",
+          "export_normalizer.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.844
+      },
+      {
+        "command": [
+          "python3",
+          "export_continuation.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 10.287
+      },
+      {
+        "command": [
+          "python3",
+          "export_meridian.py",
+          "emit",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 1.071
+      },
+      {
+        "command": [
+          "python3",
+          "export_galois.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 44.77
+      },
+      {
+        "command": [
+          "python3",
+          "tools/generate.py",
+          "--check"
+        ],
+        "exit_code": 0,
+        "seconds": 0.058
+      },
+      {
+        "command": [
+          "sh",
+          "run-lake.sh",
+          "build",
+          "Sz8.Monodromy"
+        ],
+        "exit_code": 0,
+        "seconds": 37.912
+      },
+      {
+        "command": [
+          "sh",
+          "run-lake.sh",
+          "build",
+          "Sz8"
+        ],
+        "exit_code": 0,
+        "seconds": 1034.987
+      },
+      {
+        "command": [
+          "sh",
+          "run-lake.sh",
+          "env",
+          "lean",
+          "Audit.lean"
+        ],
+        "exit_code": 0,
+        "seconds": 8.244
+      }
+    ],
+    "batches": [
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert000",
+          "Sz8.Monodromy.Meridian.Cert001",
+          "Sz8.Monodromy.Meridian.Cert002",
+          "Sz8.Monodromy.Meridian.Cert003",
+          "Sz8.Monodromy.Meridian.Cert004",
+          "Sz8.Monodromy.Meridian.Cert005",
+          "Sz8.Monodromy.Meridian.Cert006",
+          "Sz8.Monodromy.Meridian.Cert007",
+          "Sz8.Monodromy.Meridian.Cert008",
+          "Sz8.Monodromy.Meridian.Cert009"
+        ],
+        "exit_code": 0,
+        "seconds": 252.0,
+        "max_rss_bytes": 4411555840
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert010",
+          "Sz8.Monodromy.Meridian.Cert011",
+          "Sz8.Monodromy.Meridian.Cert012",
+          "Sz8.Monodromy.Meridian.Cert013",
+          "Sz8.Monodromy.Meridian.Cert014",
+          "Sz8.Monodromy.Meridian.Cert015",
+          "Sz8.Monodromy.Meridian.Cert016",
+          "Sz8.Monodromy.Meridian.Cert017",
+          "Sz8.Monodromy.Meridian.Cert018",
+          "Sz8.Monodromy.Meridian.Cert019"
+        ],
+        "exit_code": 0,
+        "seconds": 185.2,
+        "max_rss_bytes": 4164681728
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert020",
+          "Sz8.Monodromy.Meridian.Cert021",
+          "Sz8.Monodromy.Meridian.Cert022",
+          "Sz8.Monodromy.Meridian.Cert023",
+          "Sz8.Monodromy.Meridian.Cert024",
+          "Sz8.Monodromy.Meridian.Cert025",
+          "Sz8.Monodromy.Meridian.Cert026",
+          "Sz8.Monodromy.Meridian.Cert027",
+          "Sz8.Monodromy.Meridian.Cert028",
+          "Sz8.Monodromy.Meridian.Cert029"
+        ],
+        "exit_code": 0,
+        "seconds": 194.7,
+        "max_rss_bytes": 4254777344
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert030",
+          "Sz8.Monodromy.Meridian.Cert031",
+          "Sz8.Monodromy.Meridian.Cert032",
+          "Sz8.Monodromy.Meridian.Cert033",
+          "Sz8.Monodromy.Meridian.Cert034",
+          "Sz8.Monodromy.Meridian.Cert035",
+          "Sz8.Monodromy.Meridian.Cert036",
+          "Sz8.Monodromy.Meridian.Cert037",
+          "Sz8.Monodromy.Meridian.Cert038",
+          "Sz8.Monodromy.Meridian.Cert039"
+        ],
+        "exit_code": 0,
+        "seconds": 182.9,
+        "max_rss_bytes": 4168941568
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert040",
+          "Sz8.Monodromy.Meridian.Cert041",
+          "Sz8.Monodromy.Meridian.Cert042",
+          "Sz8.Monodromy.Meridian.Cert043",
+          "Sz8.Monodromy.Meridian.Cert044",
+          "Sz8.Monodromy.Meridian.Cert045",
+          "Sz8.Monodromy.Meridian.Cert046",
+          "Sz8.Monodromy.Meridian.Cert047",
+          "Sz8.Monodromy.Meridian.Cert048",
+          "Sz8.Monodromy.Meridian.Cert049"
+        ],
+        "exit_code": 0,
+        "seconds": 180.2,
+        "max_rss_bytes": 4206231552
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert050",
+          "Sz8.Monodromy.Meridian.Cert051",
+          "Sz8.Monodromy.Meridian.Cert052",
+          "Sz8.Monodromy.Meridian.Cert053",
+          "Sz8.Monodromy.Meridian.Cert054",
+          "Sz8.Monodromy.Meridian.Cert055",
+          "Sz8.Monodromy.Meridian.Cert056",
+          "Sz8.Monodromy.Meridian.Cert057",
+          "Sz8.Monodromy.Meridian.Cert058",
+          "Sz8.Monodromy.Meridian.Cert059"
+        ],
+        "exit_code": 0,
+        "seconds": 195.7,
+        "max_rss_bytes": 4044062720
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert060",
+          "Sz8.Monodromy.Meridian.Cert061",
+          "Sz8.Monodromy.Meridian.Cert062",
+          "Sz8.Monodromy.Meridian.Cert063",
+          "Sz8.Monodromy.Meridian.Cert064",
+          "Sz8.Monodromy.Meridian.Cert065",
+          "Sz8.Monodromy.Meridian.Cert066",
+          "Sz8.Monodromy.Meridian.Cert067",
+          "Sz8.Monodromy.Meridian.Cert068",
+          "Sz8.Monodromy.Meridian.Cert069"
+        ],
+        "exit_code": 0,
+        "seconds": 184.2,
+        "max_rss_bytes": 4094820352
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert070",
+          "Sz8.Monodromy.Meridian.Cert071",
+          "Sz8.Monodromy.Meridian.Cert072",
+          "Sz8.Monodromy.Meridian.Cert073",
+          "Sz8.Monodromy.Meridian.Cert074",
+          "Sz8.Monodromy.Meridian.Cert075",
+          "Sz8.Monodromy.Meridian.Cert076",
+          "Sz8.Monodromy.Meridian.Cert077",
+          "Sz8.Monodromy.Meridian.Cert078",
+          "Sz8.Monodromy.Meridian.Cert079"
+        ],
+        "exit_code": 0,
+        "seconds": 193.4,
+        "max_rss_bytes": 4055941120
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert080",
+          "Sz8.Monodromy.Meridian.Cert081",
+          "Sz8.Monodromy.Meridian.Cert082",
+          "Sz8.Monodromy.Meridian.Cert083",
+          "Sz8.Monodromy.Meridian.Cert084",
+          "Sz8.Monodromy.Meridian.Cert085",
+          "Sz8.Monodromy.Meridian.Cert086",
+          "Sz8.Monodromy.Meridian.Cert087",
+          "Sz8.Monodromy.Meridian.Cert088",
+          "Sz8.Monodromy.Meridian.Cert089"
+        ],
+        "exit_code": 0,
+        "seconds": 190.6,
+        "max_rss_bytes": 4072488960
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert090",
+          "Sz8.Monodromy.Meridian.Cert091",
+          "Sz8.Monodromy.Meridian.Cert092",
+          "Sz8.Monodromy.Meridian.Cert093",
+          "Sz8.Monodromy.Meridian.Cert094",
+          "Sz8.Monodromy.Meridian.Cert095",
+          "Sz8.Monodromy.Meridian.Cert096",
+          "Sz8.Monodromy.Meridian.Cert097",
+          "Sz8.Monodromy.Meridian.Cert098",
+          "Sz8.Monodromy.Meridian.Cert099"
+        ],
+        "exit_code": 0,
+        "seconds": 202.5,
+        "max_rss_bytes": 4067508224
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Cert100",
+          "Sz8.Monodromy.Meridian.Cert101",
+          "Sz8.Monodromy.Meridian.Cert102",
+          "Sz8.Monodromy.Meridian.Cert103",
+          "Sz8.Monodromy.Meridian.Cert104"
+        ],
+        "exit_code": 0,
+        "seconds": 123.3,
+        "max_rss_bytes": 4415733760
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Legs000",
+          "Sz8.Monodromy.Meridian.Legs001",
+          "Sz8.Monodromy.Meridian.Legs002",
+          "Sz8.Monodromy.Meridian.Legs003",
+          "Sz8.Monodromy.Meridian.Legs004",
+          "Sz8.Monodromy.Meridian.Legs005",
+          "Sz8.Monodromy.Meridian.Legs006"
+        ],
+        "exit_code": 0,
+        "seconds": 69.3,
+        "max_rss_bytes": 5045567488
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.LegsB000",
+          "Sz8.Monodromy.Meridian.LegsB001",
+          "Sz8.Monodromy.Meridian.LegsB002",
+          "Sz8.Monodromy.Meridian.LegsB003",
+          "Sz8.Monodromy.Meridian.LegsB004",
+          "Sz8.Monodromy.Meridian.LegsB005",
+          "Sz8.Monodromy.Meridian.LegsB006"
+        ],
+        "exit_code": 0,
+        "seconds": 76.5,
+        "max_rss_bytes": 5030035456
+      },
+      {
+        "batch": [
+          "Sz8.Monodromy.Meridian.Chain2",
+          "Sz8.Monodromy.Meridian.Gamma1",
+          "Sz8.Monodromy.Meridian.Gamma2"
+        ],
+        "exit_code": 0,
+        "seconds": 23.0,
+        "max_rss_bytes": 5314756608
+      },
+      {
+        "batch": [
+          "Sz8.Galois.ThetaData0",
+          "Sz8.Galois.ThetaData1",
+          "Sz8.Galois.ThetaData2"
+        ],
+        "exit_code": 0,
+        "seconds": 203.2,
+        "max_rss_bytes": 5189533696
+      },
+      {
+        "batch": [
+          "Sz8.Galois.ThetaData3",
+          "Sz8.Galois.ThetaData4",
+          "Sz8.Galois.ThetaData5"
+        ],
+        "exit_code": 0,
+        "seconds": 184.4,
+        "max_rss_bytes": 5187715072
+      },
+      {
+        "batch": [
+          "Sz8.Galois.ThetaData6"
+        ],
+        "exit_code": 0,
+        "seconds": 174.5,
+        "max_rss_bytes": 5187895296
+      },
+      {
+        "batch": [
+          "Sz8.Galois.NodeData"
+        ],
+        "exit_code": 0,
+        "seconds": 37.3,
+        "max_rss_bytes": 1981693952
+      },
+      {
+        "batch": [
+          "Sz8.Galois.SepData"
+        ],
+        "exit_code": 0,
+        "seconds": 2.9,
+        "max_rss_bytes": 1738260480
+      }
+    ],
+    "batch_seconds_total": 2855.8,
+    "verify_seconds_total": 1147.5,
+    "verify_max_rss_bytes": 8254914560
+  },
+  "audit": {
+    "success": true,
+    "trust": "Kernel-only: every audited theorem uses at most propext, Classical.choice, Quot.sound.",
+    "audited_declarations": 235,
+    "axiom_sets": {
+      "Classical.choice, Quot.sound, propext": 215,
+      "propext": 16,
+      "Quot.sound, propext": 4
+    },
+    "headline": {
+      "Sz8.Galois.card_gal_specialization": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.gal_specialization_eq_N": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.gal_specialization_equiv_suzuki": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.N_equiv_suzuki": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    },
+    "axioms": {
+      "Sz8.Monodromy.modular_certificate_11": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.modular_certificate_31": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.factorization_11": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.factorization_31": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.irreducible_11": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.irreducible_31": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.squarefree_11": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.squarefree_31": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.degrees_11": [
+        "propext"
+      ],
+      "Sz8.Monodromy.degrees_31": [
+        "propext"
+      ],
+      "Sz8.Monodromy.inputs_agree": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.continuation_step_one": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paper_one_root_during_step": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paper_real_segment": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperSpecialization_monic_natDegree": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.natDegree_dvd_card_gal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.seven_dvd_card_gal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.thirteen_dvd_card_gal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.ninetyOne_dvd_card_gal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.card_gal_ge_ninetyOne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperSpecialization_irreducible": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperSpecialization_separable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.sixtyFive_dvd_card_gal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.fourHundredFiftyFive_dvd_card_gal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperFamily_eq_sparse": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperFamily_specialization": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperFamily_specialization_separable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.MonicFamily.isCoveringMapOn_proj": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.MonicFamily.monodromy_root_mem_ball": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.MonicFamily.monodromy_eq_of_ball": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.MonicFamily.monodromy_trans": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperFamily_monic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paper_isCoveringMap": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.σ₁_pow_three": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.σ₁_fixed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.σ₂_pow_three": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.σ₂_fixed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.σ₁σ₂_pow_thirteen": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.σ₁σ₂_fixed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.GaussPoly.discCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.GaussPoly.discCheck_of_packedCheck": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.stepCertified_of_checks": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.regular_of_discs": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.paperFamily_eq_famPoly": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.step0_certified": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.step_monodromy": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.junction": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.GaussPoly.conv_coeff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.GaussPoly.discCheck_of_convCheck": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.stepCertified_of_conv": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.StepDatum.cert_of_conv": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.junctionB_of_junctionG": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.Chain.chain_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.Chain.loop_monodromy": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.StepDatum.Cert.conj": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.Meridian1.zero_regular": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.Meridian1.monodromy_γ₁": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.Meridian1.meridian_monodromy": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.card_closure_sigma": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.commutator_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.card_commutator_sigma": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.Nstab01": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.eq_of_ninetyOne_dvd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.mem_of_fixes01": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Monodromy.normalizer_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.vanKampen_generation": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.liftIndex_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.liftIndex_inv": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.liftIndex_circleLoop": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.zpowers_eq_top_of_abs_liftIndex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Circuit.circuit_liftIndex": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Circuit.circuit_zpowers_eq_top": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Retract.map_incl_injective": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Retract.zpowers_eq_top_of_map_incl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.PolyIndex.liftIndex_loopC": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.TwoPunctures.polylines_generate": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Descent.kernel_descent": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Filling.Setup.range_eq_closure": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FixedMinor.B_ne_zero_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FixedMinor.rootMultiplicity_of_B_ne_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FixedMinor.node_multiplicity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.PackedWitness.witness_of_packed": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NodeAlgebra.resultant_mul_derivative": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NodeAlgebra.resultant_quadratic_derivative": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FLink.P_eq_Ftil": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FLink.resultant_Ftil": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FLink.B_Ftil": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NodeM2.node_M2": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NodeLocal.local_monodromy_trivial": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.ResAlg.res_eq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.ResEval.identity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NodeSep.derivative_ne_of_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NodeSep.q_ne_of_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Nodes.regular_compl": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Nodes.nodesS_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Nodes.nodes_eq_nodesS": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Nodes.node_local": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.GaloisDescent.res_range_normal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.GaloisDescent.geometric_normal_in_arithmetic_of_rel": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.RelNormal.mem_adjoin": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.RelNormal.relNormal": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.PolyGrowth.eq_polynomial_of_growth": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.RootAnalytic.differentiableAt_of_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.RootAnalytic.analyticOnNhd_of_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Germs.splits_rootGerm": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Germs.rootGerm_injective": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Germs.polyGerm_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Continuation.continue_along": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Continuation.continue_monodromy": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Relations.relations_monodromy": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Bridge.mem_image_iff": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Bridge.bridge": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.monodromy_eq_comp": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.orbitPolyOf_indep": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.orbitPoly_local": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.orbitCoeff_analyticAt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.orbitCoeff_analyticOnNhd": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.exists_separating": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.regular_compl_finite": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Orbit.regular_isPathConnected": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.OrbitPoly.norm_coeff_prod_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.OrbitPoly.norm_orbitCoeff_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.OrbitPoly.exists_root_growth": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.OrbitPoly.exists_orbitCoeff_poly": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.OrbitPoly.orbitPhi_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Converse.orbitPhi_germ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Converse.converse": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.monodromy_eq_geometric_galois": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.generic_galois": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Stab13.card_stabilizer_pair_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Stab13.card_stabilizer_set_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Stab13.stab_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Stab13.orbit_stable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Stab13.orbit_cover": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FirstEdge.units_map_residue": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FirstEdge.exists_primitive_ratio": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FirstEdge.specialize_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FirstEdge.Fτ_eval": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.FirstEdge.Fτ_monic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Specialize.exists_decomposition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Specialize.image_le_decomposition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Specialize.smul_eq_self_of_residue": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.SpecFamily.fQ_monic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.SpecFamily.fQ_spec": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.specialization_le_decomposition": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Specialize.smul_eq_self_of_split": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.decomposition_le_of_split_witness": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.Θ_mul_mem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.map_Θ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.exists_pow_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.disc_eq": [
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.Rs_monic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.Rs_fibre": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.disc_eval_zero_ne": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.eq_of_pins": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.Z1_natDegree": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.Z2_natDegree": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.Z3_natDegree": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.DegreeBound.isIntegralElem_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.DegreeBound.isIntegralElem_Θ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.DegreeBound.natDegree_le_of_isIntegralElem": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.sym_natDegree_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.IntModel.terms_ok": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.IntModel.fZ_monic": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.IntModel.fZ_eval": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.IntModel.int_of_isIntegral": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.IntModel.isIntegralElem_Θ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Resolvent.exists_perm_pow_mul": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.sigma1_not_mem_N": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.sym_int": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.map_symOf": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.sym_eval_of_link": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.exists_disc_roots": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.meridian_monodromy_labelled": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.generic_galois_labelled": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.GermEval.eventually_eval_eq_zero": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.GermEval.analyticAt_eval₂": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.disc_root_unique": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.disc_root_analyticAt": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.germ_link": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Pinning.pins_of_inverse": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Pinning.pins": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Pinning.r_small": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NSum.sum_lclosure": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.NSum.sum_mono_grouped": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Θ_eq_grouped": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Enclose.encCheck_sound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.EncData4.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.norm_eval_eq_prod": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.enclose": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.enclose_disc_root": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.enclosures_point4": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Lipschitz.norm_Θ_sub_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Lipschitz.norm_Θ_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Lipschitz.norm_sym3_sub_le": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.ThetaEval.gc_thetaGI": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.PointBound.point_bound": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.ZList.aeval_Z": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.near_point": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.EncData0.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.EncData1.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.EncData2.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.EncData3.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.EncData5.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.EncData6.checks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData0.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData1.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData2.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData3.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData4.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData5.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.ThetaData6.symChecks": [
+        "propext"
+      ],
+      "Sz8.Galois.sym_near": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.resolvent_identity": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.decomposition_le_N": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.specialization_embeds": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.gal_specialization_eq_N": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.card_gal_specialization": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.θ8_sq": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.det_Tmat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.det_Mmat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.det_Wmat": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.ovoid_card": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.ovoid_stable": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.eq_scalar_of_frame": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.ψ_injective": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.siftOK": [
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.word1OK": [
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.word2OK": [
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.suzuki_le_presSub": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.φ_injective": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.range_φ": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.Suzuki.suzukiEquiv": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.N_equiv_suzuki": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ],
+      "Sz8.Galois.gal_specialization_equiv_suzuki": [
+        "Classical.choice",
+        "Quot.sound",
+        "propext"
+      ]
+    }
+  },
+  "generated_files_sha256": "f076c9e03e971b83e0e280b68f4cf9db5632d7cb3fe35e6901d305e41b735315",
+  "sources": {
+    ".gitignore": "67eca993a6cf88218323c6819e77735644d2dd7baece68ddacc0ba437a4b948c",
+    "Audit.lean": "4e347158d4a394b033244bb0efe67ac9bda8c3bdf90b550b08c619f3d9a2936a",
+    "README.md": "9bddec0b390905755631f2b88fb4c5a4be8dd11b1ba68e2ddd44d27b8ea34617",
+    "Sz8.lean": "2293bfa771d21872e47b17409fb0aa7b9c5513ded55ea7597d3024f6a7bb36eb",
+    "Sz8/Galois.lean": "85ee0257f73fd04aa37daee3401611aa8c595b0cf34273ed1819383740a5f781",
+    "Sz8/Galois/Bridge.lean": "d6d7c9202f4d112d3ed73bda0c6497ea970876722934476e6b6a1a397f0b4129",
+    "Sz8/Galois/Circuit.lean": "00133634db074e6445b5a6219206f248c4bdaa45b6fd701b2df55867d39e070f",
+    "Sz8/Galois/Continuation.lean": "63b4cf731ed30775904884dd46860307a96e576b689b375b571808de8a7d1a10",
+    "Sz8/Galois/Converse.lean": "5b2fcb97494815861884dcf783977639ba4b76a624c9373cbecb2755f06a55cc",
+    "Sz8/Galois/DegreeBound.lean": "c4e607bcf75cb9249f738551cdcd0c8c849d9803026f5c04a8d3fb327e79b062",
+    "Sz8/Galois/Descent.lean": "741a0e7e1f278be02d9d12c1932f57966b82c14af3acb19897409d4b340b24b8",
+    "Sz8/Galois/Enclose.lean": "ae53b190e268d3d12383ae4e9f3a329e9982ebe1b16cd11aaafec6f2bf00e5e2",
+    "Sz8/Galois/FLink.lean": "9af6220261bc01907923aeab4cd4c9311e9dbfdd36322a52732aa5640560d6f9",
+    "Sz8/Galois/Filling.lean": "f936cfd53c5226607b9458b99845bc880cf4a1f5e63c674312665dcb253f29f1",
+    "Sz8/Galois/FirstEdge.lean": "bfec8004967728d17ca9bdebb686b36c8cbe5ff6eb3d73a63977052541ad649e",
+    "Sz8/Galois/FixedMinor.lean": "9c5141c4434c7fd976dd9989797d284a85907a88d9ba3a39775e9667c464a962",
+    "Sz8/Galois/GaloisDescent.lean": "882b621eac8fc97564f16f69abb095ed9b61cb9f848e4d25f6daab9f4d2d70a6",
+    "Sz8/Galois/GermEval.lean": "a64e780243539fd673774ea4e5bdc83ba5cc41658ddeb510e229fa81a7340614",
+    "Sz8/Galois/Germs.lean": "35e29d697b0395a412a41719d1ae02d552ff9f874770aff9942a003ed103c9c1",
+    "Sz8/Galois/Identity.lean": "b9a30f9dc06d39e82a50811001ddef54c8105f5d027ee244689023c7d64e3267",
+    "Sz8/Galois/IntModel.lean": "1d1e5466164f99db04e21104128cf6166bb29b692edb938d3341edd8b96918d8",
+    "Sz8/Galois/LiftIndex.lean": "84455431ffc7eb4f00701e2758fdc46249a06630d4a1cb84cdf93188d8b00f5f",
+    "Sz8/Galois/Lipschitz.lean": "2a376e1d000b5945b02208aad189ce6840f109a1208bc4bf75cbcf929655afb7",
+    "Sz8/Galois/Loops.lean": "24c5bf24250d5487a26f138d777e751aad3b7a9f5c2175388c96f506f220348a",
+    "Sz8/Galois/MainTheorem.lean": "f1f266b77d06a49b7d1af74aa0488f9d7fc72512d3bc9f567b03d318f6648a97",
+    "Sz8/Galois/ModTransfer.lean": "2d2fad7311b132db21af2b013ae4372db80f6d30a9513bf09ece9642b2a9f10c",
+    "Sz8/Galois/NSum.lean": "0bfc80194c795b0f45c0d4770f7bd8bf86b49ed4bba976a90716760fd2f6eeb4",
+    "Sz8/Galois/NodeAlgebra.lean": "eb7e1d95eec1cba81ddf06a83a13d9000d0cbe9f94f129e83319c0029b6573da",
+    "Sz8/Galois/NodeLocal.lean": "965dc6a35eef7687747571fcaccc9aa93937447b1283a5590fb717934f0ec820",
+    "Sz8/Galois/NodeM2.lean": "3267e94271c9fc4d0fd11ddd4461854a2cbe7b93e149b3ad8da6fae5570bf39f",
+    "Sz8/Galois/NodeSep.lean": "f74dcabc4044f22a5810711d02f827d4c39bee26f147cf392c963c560e5dda33",
+    "Sz8/Galois/Nodes.lean": "b82fe2a91c6f7b8047c31f9cfe09ffd1db359e5d0662028d15edafd3f4312fa8",
+    "Sz8/Galois/Orbit.lean": "e8140128d435d13fec2918a534e16c81d888790b088fa176436ddfba0c5918b1",
+    "Sz8/Galois/OrbitPoly.lean": "799f505d3f53afafa783fb261ff0c35bcc4eb9a60acedd24f2ec121b63e845ac",
+    "Sz8/Galois/Packed.lean": "4262ca27c683c8da28f7bdec43d0f72c86b65d279e8f573e9e1205a87dae45d7",
+    "Sz8/Galois/PackedWitness.lean": "07cb4a4820668e83a6d35dd63e4a241374910f96b62c8db4123d344a071a0019",
+    "Sz8/Galois/Pinning.lean": "b609890af7e9e5b8a9e51c3ab616d9f3c1d9110e0c839900d887f43c7673b53a",
+    "Sz8/Galois/PointBound.lean": "f93774811726693b88c9d71ab5283fdfe91a9cfe7ab7aafd705d5b51a6bc7d4d",
+    "Sz8/Galois/PolyGrowth.lean": "f02591b081896c7d7ed59154d7db33aeb6f836e251a79a21563c10989188c85e",
+    "Sz8/Galois/PolyIndex.lean": "6dbc0ef67cdf333192220e88b3a6debea80db111419b215a3fa3df29ad3f3cd6",
+    "Sz8/Galois/RelNormal.lean": "a3d716ef629ebff436cc23114f1af29be83a4aaa62ae084edfd8ac281555d654",
+    "Sz8/Galois/Relations.lean": "a06ef0fb5520847602841ef1db368e748906716e4155f2571290c3f3680c961d",
+    "Sz8/Galois/ResAlg.lean": "00732ecb983b9bc8751f6a2d1b505b009d6e5550b274a9a57be7618c478a1690",
+    "Sz8/Galois/ResDegree.lean": "606595b0e16faf5edde51d4612bab18d5dc48608b777654b7d3acafd1a091019",
+    "Sz8/Galois/ResDegreeData.lean": "c956820f659ecb06ab864963fae5f3885faf91680203bd400912e9b2db572ec9",
+    "Sz8/Galois/ResEvalCore.lean": "5b350bc747aa2acd97ae021998b4aa368646079def1708ad8e093e5d90782c2b",
+    "Sz8/Galois/ResEvals/B00.lean": "6e0ecdd9102c54a11e259cabe06beafc9b5b3e25cddab33c23e75fc05e1c8b51",
+    "Sz8/Galois/ResEvals/B01.lean": "dbc0c14d4349d644c05fb441847f36a743dd2ae82d2a09bddcbc294f4e27de9d",
+    "Sz8/Galois/ResEvals/B02.lean": "5551382f394769bc4765efe15db66f6492a0be7fa178d8ddd35a90eead4b6031",
+    "Sz8/Galois/ResEvals/B03.lean": "c5c7333daa0fe0ce6261c11cb0982ef0721b3d9c96fd715983969060ac0825ed",
+    "Sz8/Galois/ResEvals/B04.lean": "11926b95df369ccdf5418a64f9333f8b2919236f386c9af9d7ea4bd0dcc2beec",
+    "Sz8/Galois/ResEvals/B05.lean": "12fd9b62b5b2e242dbae1c2dd75d45c05d653f4e8dc67aeb1c21ef882ee63239",
+    "Sz8/Galois/ResEvals/B06.lean": "a8c1e92d74990dbf3a843f70119a64c7daf6271267cf778628f262afc2c83007",
+    "Sz8/Galois/ResEvals/B07.lean": "e3e0df9d58e56b1b2572461732c97ffb36b11417ca78d6c398ff5f799cbb874c",
+    "Sz8/Galois/ResEvals/B08.lean": "6a5a2e539bc93eccd6a3f39b7c2fd61bd1c596a0a57be56bd8b91fa93454eac9",
+    "Sz8/Galois/ResEvals/B09.lean": "c5e1fa8261d2b60b09253eb2f7298974df4a6d0474d0803feca9f71c4cf4ff2d",
+    "Sz8/Galois/ResEvals/B10.lean": "6c0f2239c8aef870f28c6099ec59919cfbcdc190579de5d57cb0b0c6ed6c66a2",
+    "Sz8/Galois/ResEvals/B11.lean": "2bae3a3a0abee7cb1a9bcffb8b1d7900e9e18fd7b79ce6a96c357d12e7a4a8af",
+    "Sz8/Galois/ResEvals/B12.lean": "ab97e9ac087ea9fd579739e65959a19cdc5f6815e80c9ac94c3f0998ee4dc39d",
+    "Sz8/Galois/ResEvals/B13.lean": "87062837733a69d5c84ca272f1285a823f9ed9b5e447b87d818ab446c025e2e5",
+    "Sz8/Galois/ResEvals/B14.lean": "def98b48b388e82d4a7e5cc6f141e2d7c6186f328a6ca0394bc841ad82d9b395",
+    "Sz8/Galois/ResEvals/B15.lean": "05b96c86e9c7ae4905721868907cffc7989beddc243d1925ba5786deb9dd3d2d",
+    "Sz8/Galois/ResLink.lean": "d6f41d027cd9d16f925fbeeda29aa0b8c3a97f5bb1ca798ee387ae35c54c6e74",
+    "Sz8/Galois/Retract.lean": "0246dfe9ac0385eb330b6f04dbba50d77d7107adae24102c87a31699bf9028b9",
+    "Sz8/Galois/RootAnalytic.lean": "e65ed7f67c9314dd2e2b02bffbf54bc6e5377e3334ca430be44907aff2872d39",
+    "Sz8/Galois/SpecFamily.lean": "c541f188b7344d2e627b4263853863b9108cd4cb811aaabe0c92e8e08140a17b",
+    "Sz8/Galois/Specialize.lean": "ee56f0a8398b8ed51d9684d820655972709033343578861f137b5a073d4915d6",
+    "Sz8/Galois/Stab13.lean": "9889a8a34e1c88791d537e0d61e5a110df38850c7e318cfdf7b278022a0606e2",
+    "Sz8/Galois/Stab13Core.lean": "01091c44ee55dcc61adb6ff266e962defa68909d2ce251806b85722d9f0747ec",
+    "Sz8/Galois/Suzuki.lean": "d9f86aaf47cf96cd7702f9cca5124e682194d0fb9fa946229712c2e4310f4c94",
+    "Sz8/Galois/SuzukiAction.lean": "faff34bbbbb63e923b140c64b293ed0687760073cc6ab9e3b0fc1f7046a4a26b",
+    "Sz8/Galois/SuzukiGalois.lean": "3b7b03d3daec8ce0e1f95f692a94b572d8fa71e0450215b2ac8cc6a365d4251e",
+    "Sz8/Galois/SuzukiIso.lean": "9346fc51b2ae2a2df9c0a0455843fe6c6c565f77ed7b7a5d7c7cf0b3c927718a",
+    "Sz8/Galois/ThetaEval.lean": "b7c916fd1765e52d53b09d190991005aa6e0bff2f13e39fda8109dfacd126878",
+    "Sz8/Galois/TwoPunctures.lean": "2a9bdc76daa5a5257b9444824305caec66d2de2990914fa676296aba04606496",
+    "Sz8/Galois/VanKampen.lean": "31b915c6f0b1a24c8eab6c6729f8fec5f30e3941b0f776143cbe25a99f7689f9",
+    "Sz8/Galois/ZList.lean": "e86551ece50518efdc625cc4fd18c803278cd0856bc1b92eacc8a56e767affa3",
+    "Sz8/Monodromy.lean": "98b1a094847c389c66930cbc61387c46b16541ff39fc8c7f2377808a1d786481",
+    "Sz8/Monodromy/Bounds.lean": "3eb7640ef34b96f85b9a13dba4930fca5c4480290b88ce3a623b43524408ce23",
+    "Sz8/Monodromy/Chain.lean": "6e169103c5856a4401f460288587c9cdf698241ca93db2b510e5c7c035672bdf",
+    "Sz8/Monodromy/ConcreteStep.lean": "80d60150f9124127a4df24a4642493a7c86a843668ab0ebc345e2b627183a71e",
+    "Sz8/Monodromy/Conj.lean": "56c1e74a85a13398c3006b09f964c0e57b8104bca70992bd850743a51f12fcd6",
+    "Sz8/Monodromy/Continuation.lean": "ac38891178ef3b16c197953c1cb8cb48d355351346adb20d649899b209948fe0",
+    "Sz8/Monodromy/ConvCheck.lean": "dd7b677607c44c04c87fe1049b8e9190b6a8d49562bfb0f70e3e5019b8651450",
+    "Sz8/Monodromy/DiscRouche.lean": "a31f160b2bc83c6021da7f4bdd3ffeae67cc67631b3083d872341ba0042499c7",
+    "Sz8/Monodromy/GaloisDegree.lean": "c151957c16b1890ef6248d5d8150447f8b1ba2efe212baa91370adfa8a126176",
+    "Sz8/Monodromy/GaussPoly.lean": "67d5d2039ef724c4ec55d02d89cce2c83b5832d6243e0c84076824c1b45c99d8",
+    "Sz8/Monodromy/GroupTools.lean": "59026d13a369410741e91a6de918c9f85e33652a0b71a9d32abd907178cde32c",
+    "Sz8/Monodromy/InputAgreement.lean": "de2808597ac0741918d531b906aadaf40ab9f2fd8fb599c365bb93eecb1e0068",
+    "Sz8/Monodromy/Irreducibility.lean": "e7761caf4eb0b4a766b6b8d374431cf25d9802f8167e54e9aa771c2658100b08",
+    "Sz8/Monodromy/Link.lean": "10dd881f328c13efc02f0a278af56e5aaa2d64dadaee0e48248d4415675d5e6e",
+    "Sz8/Monodromy/ListPoly.lean": "d211dbc0536e49245c3bc4e275856002049115fd52018b8c73fee3318330e53d",
+    "Sz8/Monodromy/NinetyOne.lean": "b3af04c6faf0e529165ca8e500dd39639844433db17966fae0e4ab14613db832",
+    "Sz8/Monodromy/Normalizer.lean": "f4376ba12cc22d84c080e8d2f35d882d5d1e5e172df5c7df631345cc8f4cee00",
+    "Sz8/Monodromy/PackedCheck.lean": "f517473845cdd99677fa8a60e42c0084edb1cae123064bbe9c9defca76507f99",
+    "Sz8/Monodromy/PackedPerm.lean": "1302f0bfba2c8204a1041da5a9095d1fa71544217d6210fcd447204e8abd289f",
+    "Sz8/Monodromy/PaperCovering.lean": "92310c3632eca50eb27bfe8bce3d0fa34a11766e0b76cabe61926ec4e6109d68",
+    "Sz8/Monodromy/PermChain.lean": "d77e64dbc7a6af980d2f40149d360893afc1719c3b3a76e6efee3512b034504f",
+    "Sz8/Monodromy/Results.lean": "3e369a06aacd999fd66b7a6670a2954ccaa2ced6ef66efe3cdec3cf7f03ae705",
+    "Sz8/Monodromy/RootCovering.lean": "e39cc21a85a2339fb7da89ab67dbf1fcd876744521677b59d5f5f0785d8a0aa4",
+    "Sz8/Monodromy/RootTransport.lean": "e8b3b6d2e671acd5cae0939c81d660658191ed73cb77844fe7b9a4fba496e18b",
+    "Sz8/Monodromy/Specialization.lean": "af68b559a321144459b868c1846aeeaa14a9b5a8dfcc431689b412c4c5f42a40",
+    "Sz8/Monodromy/StepChain.lean": "af5a84e3f784522888baab46d10e8c8bb2e96bafb0fcfb42067d3fcd47d0a610",
+    "Sz8/Monodromy/StepCheck.lean": "64ee12272debcf16553d3498a3213292a4f45642c671c99515397099348466d0",
+    "Sz8/Monodromy/StepDatum.lean": "dc55bb5299fa2cf02345ce2a94a40722560741460799e9a02cc7fd3db4ebb9db",
+    "certs/meridian1.json": "fc1577c318be70ad8c69aab6efeb32b291784ff4531200b596541a95dd3102a4",
+    "export_continuation.py": "7d6248592147d05d0bea3b72e97ff7e96fdaf3322da47123436c6946b1b946d8",
+    "export_galois.py": "42a9ea35b43d3554504994b85227e027d3ec397fd426c5bce821904282096c18",
+    "export_groups.py": "f5c10b8bf1e69dde0e624aab8a9b9851827f7d9844fefb6b72373bef6d470d44",
+    "export_inputs.py": "bfb3e3470b3d6dd720592ec40da0b3aa8fe4ecc5ee8b244b04572d3d7b8f78a4",
+    "export_meridian.py": "727fce19ae4026147de8063f3b27c28fa5cc77150f00b6a57209704e4a67b8d9",
+    "export_monodromy.py": "aa107e6c5930a7d6eb12a15b61bcd1cf8001d5f516e99c432aaa15572426c80b",
+    "export_normalizer.py": "06f411dfbed9c9b8f75ba3d243e3f924783a98688bde36eef179eadb944762b6",
+    "export_provenance.py": "98c4c745834972e87c4d71286b59076136cb44c2eb1afcd9d1335cb6a78ee69f",
+    "export_step.py": "3c1efea9a0b785d6479e320bac98c1742319945ff1a12020573ef7f2b438dc85",
+    "export_sylow.py": "90e0359fb00de70e4c85d8c7306336fea68c393d79d91c9cd473c701bed36e9f",
+    "galois/README.md": "8f65f33bfd0be2cc8e0da6cbe154ff1d65c38851667a5d339dddee4e77a97aeb",
+    "galois/enc.py": "db29ee288ba8b17d77869aac6ed21b02c6b7f3a39f7d87bc946853971d5e3e57",
+    "galois/inputs/Resolvent.tpl": "55eceffd04d8b68c5b25fc4cf9cc12dde3cbae2dba46e7a0a1d6d7fbedc4a19f",
+    "galois/inputs/resolvent_coefficients.json": "6ae7946915f9aaaac9d87f209a3d1d121716751923a5a99332fd00b4f6980541",
+    "galois/inputs/suzuki_conj.txt": "6bfc6c9c1aa298ef74b76f2b2b40e4495d89ca569a888da77c175ebe47f3e1a1",
+    "galois/nodedata.py": "188f6a5b6d179574d92d99249f0a3156caed32757d848780b3442d91830135ae",
+    "galois/paths.py": "a23ded46209b30861f6e6fd0133fdd2dfcc847081e86d960758b5d1427a4bba4",
+    "galois/resolvent.py": "3f59bb6b3ace391991412111d2aff9e3211ae9aece9db660715e3e6138af42f6",
+    "galois/sepdata.py": "9bc59f95f9e7f2fbea61f29e09ac7fa92bdcdca152c8af97b065de963599045c",
+    "galois/stab13.py": "c88afbb1700a309e96a0dc91b6b0402e14ef3ff2ea9c3cd66e61a2037b48ea13",
+    "galois/suzuki.py": "0a5d6b4e47a9d759fae9b5113520afd2f2b8a55a3fc88a63b830dac971f54183",
+    "galois/theta.py": "b4c6ec140827b7e7aa197950ffe1c94261c06685123a6a686a7804a23edf95a7",
+    "galois/upstream/invariant/coef.gp": "7f26d5cd244685882363d059881ae2c23ebacf362fcd4c9a2962a2254dae3e5a",
+    "galois/upstream/invariant/orb.g": "48f7ee8bec06e192e43a604e0e2efb10d9fcf4eb39f976e5ab0feddb021b2212",
+    "galois/upstream/invariant/post.gp": "c636acab06dae148057a8070109d7b0ccf2fdd169f0206f0906a460a17b550f5",
+    "galois/upstream/invariant/resolvent.gp": "b456b1cab353335aca5afc921fe970919dc53b1cec84d582aa2acb2999d20b55",
+    "galois/upstream/invariant/run.gp": "29c42d0ae21b3d5800d24d6b3b3206334d5d0f98e77f305ac0196d2de49d64c3",
+    "galois/upstream/invariant/run_invariant.py": "9c28befff5d518b7207f454342b2949ec5f2219e2ce3e3a8dadb452fab964e40",
+    "galois/upstream/suzuki/gap1.g": "bd9ef5ac1b93348be1601a0fd7ca10b2a6ac6de96f1b70db3b28acf8f73e43e0",
+    "galois/upstream/suzuki/run_gap.py": "d837f6a5bc3ce580e7b56fbe31daef39ad8d5eef2787661da581dda5ac86958f",
+    "lake-manifest.json": "4bef6e1255b65d2e832bb97c10fca32971bef71e6ca2db4efad7c58fdfff9267",
+    "lakefile.toml": "0a6291b14c5140440bfc074f23dec6a50ceff0468718878da9e5499afa6e344b",
+    "lean-toolchain": "8190e75a201741065fe508b28955dd64dd72d090babe5f70ce6848879d68ae88",
+    "provenance/export_continuation.json": "5abcfa056995f393c5d25a500a35018252c0546336af87f6a46de3c35776dae6",
+    "provenance/export_galois.json": "d9de6a84089e647572e103591ec74fc62390f4c4bb0fff8bf969d1970e9486ad",
+    "provenance/export_groups.json": "d4d5b09299f4fc5869a1e64fe2b65ed524a07b9970b7c762126aecdd3b9b16d4",
+    "provenance/export_inputs.json": "4a285c0877ab84da32ed7e838b92af9d8973a24ee08f5203eaedd76d9d28277f",
+    "provenance/export_monodromy.json": "3dc0156277ded53398e041e862f8699816376961edbb76deba763902c6b45ae4",
+    "provenance/export_normalizer.json": "1d79819fd84ed9b712a3c32bf03bf77ff08805bc38460264379e8683dffadcd9",
+    "provenance/export_step.json": "a7e477dd7d74a43f2424bf7a1d06babdaaba3be511be06011589b1fe4da535d7",
+    "provenance/export_sylow.json": "02b7046afc082a2129f7c71e376524455b56303f281a8c43357bea73bc966edd",
+    "provenance/generated.json": "f076c9e03e971b83e0e280b68f4cf9db5632d7cb3fe35e6901d305e41b735315",
+    "run-lake.sh": "a6e05d6ba2ad5285c9d55ca96006f649fdad3d9010365a0184b8d9f0ebbad6e6",
+    "test_export_provenance.py": "2506f85d596630438280a92c10f0807b43196a7c188519262480e878af4365c6",
+    "test_verify.py": "9656a9fc4e6daf9698aab8f0539d637c9e2f684c36be48d23e60e98ca96ee954",
+    "tools/build_batches.py": "fbcb1705b8b67f34f70814e45cd1dbe6f743e4c599b9697ef95d4b0c675e923c",
+    "tools/clean_rebuild.sh": "93a9d33db0cf3bc14f375d21d5cf058c7d385a57342085cd6b6e46c8857d0806",
+    "tools/full_build.sh": "2e719e3def83b8090cad793b78d6ebcabb8a1d750a75d64a7c8361f7827cc428",
+    "tools/generate.py": "09980e224000e4bd6587b2e6c1fb397c70b24cd7f55cc33ca736f10d895dd233",
+    "tools/snapshot.py": "d026e9f27b90fb7b221cd5a4c229fcd3e6f76ae3fcf0f8da289e8879537edef4",
+    "verify.py": "dcf123084fb5ff908edcdd65866b7b676141e686e1dd4f6a09d19dd35384125a"
+  }
+}

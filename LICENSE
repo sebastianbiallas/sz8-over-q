@@ -23,8 +23,9 @@ Legal code: https://creativecommons.org/licenses/by/4.0/legalcode
 
 ## Data and recorded results: CC0 1.0
 
-The files in `data/`, `certificate/results/`, and `certificate/manifest.json`
-are dedicated to the public domain under the Creative Commons CC0 1.0 Universal
+The files in `data/`, `certificate/results/`, `certificate/manifest.json`,
+`lean/certs/`, `lean/galois/inputs/`, `lean/provenance/`, and
+`lean/reproducibility.json` are dedicated to the public domain under the Creative Commons CC0 1.0 Universal
 Public Domain Dedication. This includes the copies distributed as ancillary
 files with the paper.
 
@@ -32,8 +33,10 @@ Legal code: https://creativecommons.org/publicdomain/zero/1.0/legalcode
 
 ## Verification software: MIT
 
-The files in `scripts/`, `certificate/tools/`, and `certificate/gap/`, together
-with `Makefile` and `requirements.txt`, are licensed under the MIT License:
+The files in `scripts/`, `certificate/tools/`, and `certificate/gap/`, the Lean
+sources, scripts and configuration in `lean/` (except the data and prose files
+listed above), together with `Makefile` and `requirements.txt`, are licensed
+under the MIT License:
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
