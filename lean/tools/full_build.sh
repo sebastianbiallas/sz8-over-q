@@ -13,4 +13,4 @@ python3 tools/build_batches.py 3 Sz8.Galois.ThetaData0 Sz8.Galois.ThetaData1 Sz8
   Sz8.Galois.ThetaData3 Sz8.Galois.ThetaData4 Sz8.Galois.ThetaData5 Sz8.Galois.ThetaData6
 python3 tools/build_batches.py 1 Sz8.Galois.NodeData Sz8.Galois.SepData
 echo "=== verify.py"
-/usr/bin/time -l python3 verify.py
+python3 verify.py

@@ -2,12 +2,14 @@
 """Build Lean modules in batches, bounding the number of simultaneous kernel replays.
 
 Usage: python3 tools/build_batches.py BATCH_SIZE MODULE... (full module names). For every batch prints the wall
-time and the largest resident set of any process in it (macOS `/usr/bin/time -l`), and appends a JSON line to
-$BUILD_LOG_JSONL if set. Exits non-zero at the first failing batch."""
+time and, when available, the largest resident set of any process in it (macOS `/usr/bin/time -l`).
+Appends a JSON line to $BUILD_LOG_JSONL if set. Exits non-zero at the first failing batch."""
 import json, os, re, subprocess, sys, time
 from pathlib import Path
 
 HERE = Path(__file__).resolve().parents[1]
+TIME_PREFIX = (['/usr/bin/time', '-l']
+               if sys.platform == 'darwin' and os.access('/usr/bin/time', os.X_OK) else [])
 
 
 def main():
@@ -16,7 +18,7 @@ def main():
     for i in range(0, len(mods), size):
         batch = mods[i:i + size]
         start = time.time()
-        r = subprocess.run(['/usr/bin/time', '-l', 'sh', 'run-lake.sh', 'build'] + batch, cwd=HERE,
+        r = subprocess.run(TIME_PREFIX + ['sh', 'run-lake.sh', 'build'] + batch, cwd=HERE,
                            capture_output=True, text=True)
         m = re.search(r'(\d+)\s+maximum resident set size', r.stderr)
         rss = int(m.group(1)) if m else None

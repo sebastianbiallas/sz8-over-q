@@ -60,10 +60,14 @@ Do not run `lake update`: `lake-manifest.json` pins every dependency revision. `
 here and prefers a compiler unpacked into `lean-4.34.0-rc2-darwin_aarch64/`. `make lean-verify` runs
 `verify.py` once the project has been built.
 
+Batch wall times are recorded on all platforms. Peak memory is recorded when macOS's `/usr/bin/time -l`
+is available; otherwise the build runs without it and records `null` for `max_rss_bytes`.
+
 On a 12-core Apple M2 Max with 32 GB, a build from an empty `.lake/build` took 48 minutes in batches, plus
 19 minutes for `verify.py` (which builds the remaining modules). The largest single process used 8.3 GB. Mathlib
 and the Hex dependencies were already compiled and are not included in these figures. `reproducibility.json`
-records such a clean rebuild from a copy of this repository:
+records the original macOS rebuild from a copy of this repository. Its source hashes predate the later
+build-script portability changes:
 * hashes of every source file and of the pinned generated files;
 * the input hashes, the compiler archive, tool versions and dependency revisions;
 * per-batch time and memory, and the audit result for every declaration.
